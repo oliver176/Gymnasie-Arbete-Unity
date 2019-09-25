@@ -4413,7 +4413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: 1.0000002, z: -10}
+  m_LocalPosition: {x: -0.00000035762787, y: 1.0000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14752,6 +14752,7 @@ GameObject:
   - component: {fileID: 1443643383}
   - component: {fileID: 1443643389}
   - component: {fileID: 1443643387}
+  - component: {fileID: 1443643390}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -14929,6 +14930,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1443643387}
   runSpeed: 40
+--- !u!114 &1443643390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443643382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8c5fde7cc99994c876efc1e757706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 100
+  playerCurrentHealth: 0
+  playerMaxShield: 0
+  playerCurrentShield: 0
 --- !u!1 &1486072296
 GameObject:
   m_ObjectHideFlags: 0
@@ -15017,7 +15034,7 @@ MonoBehaviour:
   target: {fileID: 1443643388}
   speed: 500
   nextWaypointDistance: 1
-  enemyGFX: {fileID: 0}
+  enemyGFX: {fileID: 1571491392}
   animator: {fileID: 1571491393}
 --- !u!61 &1571491390
 BoxCollider2D:
@@ -15215,7 +15232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875098916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000023841858, y: 1.0000002, z: -10}
+  m_LocalPosition: {x: -0.00000035762787, y: 1.0000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 350048137}
