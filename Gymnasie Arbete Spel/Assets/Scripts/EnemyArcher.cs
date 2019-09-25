@@ -7,12 +7,18 @@ public class EnemyArcher : MonoBehaviour
     int currentHP;
     public int baseHP = 90;
     public int hpModifier = 12;
+
     public float dmgModifier = 0.008f;
     public float minDmg = 2000;
     public float maxDmg = 3500;
-    public float speedModifier = 0;
-    public int playerLevel;
+
+    public float fireRate;
+    private float counter;
+
+    int playerLevel;
     int enemyLevel;
+
+    public GameObject Arrow;
     public GameObject Player;
 
     // Start is called before the first frame update
@@ -24,11 +30,19 @@ public class EnemyArcher : MonoBehaviour
         dmgModifier *= enemyLevel;
         minDmg *= dmgModifier;
         maxDmg *= dmgModifier;
+
+        counter = fireRate;
     }
 
     // Update is called once per frame
     void Update()
     {
+        counter -= Time.deltaTime;
 
+        if (counter < 0)
+        {
+            Instantiate(Arrow, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            counter = fireRate;
+        }
     }
 }
