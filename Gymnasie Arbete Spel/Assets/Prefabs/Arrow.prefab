@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7811048276304385275}
   - component: {fileID: 7811048276304385272}
   - component: {fileID: 7811048276304385273}
-  - component: {fileID: 7811048276304385270}
   - component: {fileID: 1864836120343695863}
+  - component: {fileID: 1559961884826379683}
   m_Layer: 8
   m_Name: Arrow
   m_TagString: Untagged
@@ -80,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7811048276304385270
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7811048276304385271}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &1864836120343695863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +92,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfed0b59d1e9e074db4e07ff27b6bd1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  thrust: 10
+--- !u!50 &1559961884826379683
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811048276304385271}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
