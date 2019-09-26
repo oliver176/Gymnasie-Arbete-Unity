@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int level = 0;
-    public int xpToLevelUp = 100;
+    public int level = 1;
+    public float xpToLevelUp = 100;
 
     // Start is called before the first frame update
     void Start()
     {
-        LevelUp();
-        Debug.Log(level);
+        XPToLEvelUp();
+        Debug.Log(xpToLevelUp);
     }
 
     void XPToLEvelUp()
     {
-        //xpToLevelUp 
+        if (level < 2)
+        {
+            xpToLevelUp = 100;
+        }
+        else
+            xpToLevelUp = xpToLevelUp * 1.07f + (23 * (level - 1) + 1);
     }
 
     void LevelUp()
