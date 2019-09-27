@@ -28,4 +28,11 @@ public class ArrowMover : MonoBehaviour
     {
         rb2D.AddForce((playerPos - transform.position).normalized * thrust * Time.smoothDeltaTime);
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "World Collider" || other.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
