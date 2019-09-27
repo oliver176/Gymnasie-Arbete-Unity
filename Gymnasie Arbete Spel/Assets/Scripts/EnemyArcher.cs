@@ -58,6 +58,11 @@ public class EnemyArcher : MonoBehaviour
             // ... flip the player.
             Flip();
         }
+        if (currentHP <= 0)
+        {
+            Destroy(this.gameObject);
+            PlayerStats.XPGain(xpGain);
+        }
     }
     private void Flip()
     {
