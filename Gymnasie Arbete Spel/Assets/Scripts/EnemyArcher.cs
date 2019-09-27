@@ -46,7 +46,6 @@ public class EnemyArcher : MonoBehaviour
             counter = fireRate;
         }
 
-<<<<<<< HEAD
         // If the input is moving the player right and the player is facing left...
         if (Player.transform.localScale.x > 0 && !m_FacingRight)
         {
@@ -69,12 +68,5 @@ public class EnemyArcher : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-=======
-        if (currentHP <= 0)
-        {
-            Destroy(this.gameObject);
-            PlayerStats.XPGain(xpGain);
-        }
->>>>>>> dceef64ecd131bd0dff482d049e4a58c32086057
     }
 }
