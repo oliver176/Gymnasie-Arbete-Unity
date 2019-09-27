@@ -18,7 +18,7 @@ public class EnemyArcher : MonoBehaviour
 
     int playerLevel;
     int enemyLevel;
-    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    private bool m_FacingRight = false;  // For determining which way the player is currently facing.
     public GameObject Arrow;
     public GameObject Player;
 
