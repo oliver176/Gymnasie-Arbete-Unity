@@ -27,7 +27,8 @@ public class EnemyArcher : MonoBehaviour
     {
         PlayerStats playerStats = Player.GetComponent<PlayerStats>();
         enemyLevel = playerStats.level;
-        currentHP = baseHP + (hpModifier * enemyLevel);
+        baseHP = baseHP + (hpModifier * enemyLevel);
+        currentHP = baseHP;
         dmgModifier *= enemyLevel;
         minDmg *= dmgModifier;
         maxDmg *= dmgModifier;
