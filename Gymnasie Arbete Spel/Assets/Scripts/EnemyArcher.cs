@@ -60,7 +60,7 @@ public class EnemyArcher : MonoBehaviour
         }
         if (currentHP <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             PlayerStats.XPGain(xpGain);
         }
     }
