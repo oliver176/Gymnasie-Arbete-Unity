@@ -47,20 +47,20 @@ public class EnemyArcher : MonoBehaviour
         }
 
         // If the input is moving the player right and the player is facing left...
-        if (Player.transform.position.x > 0 && !m_FacingRight)
+        if (Player.transform.position.x > transform.position.x && !m_FacingRight)
         {
             // ... flip the player.
             Flip();
         }
         // Otherwise if the input is moving the player left and the player is facing right...
-        else if (Player.transform.position.x < 0 && m_FacingRight)
+        else if (Player.transform.position.x < transform.position.x && m_FacingRight)
         {
             // ... flip the player.
             Flip();
         }
         if (currentHP <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             PlayerStats.XPGain(xpGain);
         }
     }
