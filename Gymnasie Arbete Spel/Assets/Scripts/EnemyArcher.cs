@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyArcher : MonoBehaviour
 {
     int currentHP;
+    public float xpGain = 100;
     public int baseHP = 90;
     public int hpModifier = 12;
 
@@ -43,6 +44,12 @@ public class EnemyArcher : MonoBehaviour
         {
             Instantiate(Arrow, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             counter = fireRate;
+        }
+
+        if (currentHP <= 0)
+        {
+            Destroy(this.gameObject);
+            PlayerStats.XPGain(xpGain);
         }
     }
 }
