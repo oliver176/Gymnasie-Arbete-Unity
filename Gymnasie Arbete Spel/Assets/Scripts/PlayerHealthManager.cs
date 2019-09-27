@@ -9,12 +9,15 @@ public class PlayerHealthManager : MonoBehaviour
     public int playerMaxShield;
     public int playerCurrentShield;
 
+    public GameObject Arrow;
+
     // Start is called before the first frame update
     private void Start()
     {
         //start värden, fullt hp och 0 shield
         SetMaxHealth();
         playerCurrentShield = 0;
+        ArrowMover arrowMover = Arrow.GetComponent<ArrowMover>();
     }
 
     // Update is called once per frame
