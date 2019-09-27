@@ -10,8 +10,8 @@ public class EnemyArcher : MonoBehaviour
     public int hpModifier = 12;
 
     public float dmgModifier = 0.008f;
-    public float minDmg = 2000;
-    public float maxDmg = 3500;
+    public static float minDmg = 2000;
+    public static float maxDmg = 3500;
 
     public float fireRate;
     private float counter;
