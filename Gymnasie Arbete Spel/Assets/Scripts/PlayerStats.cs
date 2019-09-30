@@ -5,23 +5,26 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public int level = 1;
-    float xpToLevelUp;
+    public float xpToLevelUp;
+    public float xpModifierperLvl;
     public static float currentXP = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        XPToLevelUp();
     }
 
-    void XPToLEvelUp()
+    // Update is called once per frame
+    void Update()
     {
-        if (level < 2)
-        {
-            xpToLevelUp = 100;
-        }
-        else
-            xpToLevelUp += xpToLevelUp * 1.07f + (23 * (level - 1) + 1);
+        LevelUpCheck();
+    }
+
+    void XPToLevelUp()
+    {
+        xpToLevelUp += xpModifierperLvl * (level - 1);
+        //xpToLevelUp = (xpToLevelUp * 1.07f) + (23 * (level - 1) + 1);
     }
 
     void LevelUpCheck()
@@ -35,12 +38,5 @@ public class PlayerStats : MonoBehaviour
     public static void XPGain(float xp)
     {
         currentXP += xp;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        LevelUpCheck();
-
     }
 }
