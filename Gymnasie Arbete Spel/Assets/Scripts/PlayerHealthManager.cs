@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-    public int playerMaxHealth;
-    public int playerCurrentHealth;
-    public int playerMaxShield;
-    public int playerCurrentShield;
+    public float playerMaxHealth;
+    public float playerCurrentHealth;
+    public float playerMaxShield;
+    public float playerCurrentShield;
 
     public GameObject Arrow;
+    public GameObject SkeletonArcher;
 
     // Start is called before the first frame update
     private void Start()
@@ -18,6 +19,7 @@ public class PlayerHealthManager : MonoBehaviour
         SetMaxHealth();
         playerCurrentShield = 0;
         ArrowMover arrowMover = Arrow.GetComponent<ArrowMover>();
+        EnemyArcher enemyArcher = SkeletonArcher.GetComponent<EnemyArcher>();
     }
 
     // Update is called once per frame
@@ -29,11 +31,19 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
-    public void HurtPlayer(int DamageToGive) //metod som skadar player
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Arrow" || other.gameObject.name == "SkeletonArcher")
+        {
+            HurtPlayer(Random.Range(EnemyArcher.minDmg, EnemyArcher.maxDmg));
+        }
+    }
+
+    public void HurtPlayer(float DamageToGive) //metod som skadar player
     {
         if (DamageToGive > playerCurrentShield)
         {
-            int x = DamageToGive - playerCurrentShield;  //Tar först bort playerns shieldamount på dmg
+            float x = DamageToGive - playerCurrentShield;  //Tar först bort playerns shieldamount på dmg
 
             playerCurrentHealth -= x;
         }
