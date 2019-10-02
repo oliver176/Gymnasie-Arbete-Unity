@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 150668505}
   m_Layer: 9
   m_Name: Tilemap_base
-  m_TagString: Untagged
+  m_TagString: World Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4413,7 +4413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000035762787, y: 1.0000002, z: -10}
+  m_LocalPosition: {x: -0.00000023841858, y: 1.0000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIew9Soz0awIAABQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE2TojAQ/StWzqsFrDqyt110nD3MR42zNRcukTSSMiRUEkadKf/7dgIIy3oxvNcfr18avgiXpoLMKr3VnD0qBuTHhLgz+TbpyQc404OSO/4JXcw7Z7ZwQdTHvFLLFeKhSzOqBKt59lMehAsOEKwlz5UuN+wAiTLWIJxTYQAprazLlgh9TcgZ/6axS7ngKbpzp088xcHkiscMpAXdh8az2P1Wbfw0mM09sIi+t4nT1SyeB8v4bjMNVr5GLTNBywqYG6gvNe+KRKEPkzhqG+HGypQQ3LQ6ib1U3oeEVqbGKTGAcYpze3HhzHUvgB8K6woO05/z3IBtbdH0suYaDWzqkl+qcbWk5tgo+6Cidp0WYeRVNUUf/+Onjehcq/Kh6xsGrocteHZ8pZeMGjuwfQivB9K9QScqjnQv4L0A+aS2WtWSIWl17VJrA9G6f7yNlhSQHXu8kToC66p3vLvl7o7dDFc//TkRvNw7ajZvgJ1Q3nG/GqDxbn6jYL84pi2BqFPxx8AbPQw3rCXuuTYWqXZK6eTtVa1dKNl4z9w0tU2UluDhVnQFkgp7ecEydnyFI27QdsTcU/cutc1brntFRike7uODYES9qNPtskyhTo9giufaCi6HxRzzhEYlSspmxcyIdXm7Wuc0G+Ydas7+XS6yDPYAURAsWHgX75f76XyZhcDyeRDldLkKF8RvH5c4KRUvjdTWILw32VspcdO6j8xkq2nl951petryz1INTOcyV7tMA8jnpsJNOWhsgm8m2zCOFu3AWi79jZOvlAiVHYGlt0KpH3VztpqmfZWUVPxDWYekJPFflZRcyfUvUEsDBBQAAAgIAAAIIez4mpGObAAAAHcAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0rPQUVBKL0osyCgGChiCOKWZKSB2tJKZQVJqqpGBgWmKobllklmSrolZsmFqSpqJgVFaopmFoalSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7D1KjPRrAgAAFAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7PiakY5sAAAAdwAAAAkAJAAAAAAAAAAAAAAAuAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABvAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAIIew/bcb3TwIAAPgEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzk3HEBhIb60hpAcCE5rJxRchrbEGWfLoI0Ay/PeuZIMdd3pC7Hu7em935U8ilK2AOW2WRvCV5kB+DEg4k2+DFnyCE91rtRUfcOW8Ce6KQKKR80Kd0BgfhjSrS3BGsJ9qLwM5waBXItemXPA9pNo6i+GcSgsIGe1CtsLQ54Cc8OfuIaSc8TSahtMHnh6SwQWPDJQD01KvxCutZnnFJC0r4EFyS55Ov09uhSNRoZ2Gk0SMaSmFbdQQd66i25RW1qMXJHBB0V2UEMwWIPaFCwW7yes8t+AaWYae58Jgk+qq5JeuO1dSe6i1vVPpwz2T4Siqqouu/sHvhhHOjS6frvcOk3CHKwQ7vNAzo9Z1WtsNz78K9+pI5YHuJLwVoJ710mivOILO+JDqLYzm7d+btbQAdmjjtdRe0Ff/H1DwcInuT6kU5S52flwHtlLHfsfxg8HZ/EbBcTlsUwKjQcWrhT90392iBngUxjqEGpcqyNtpbwKVLGLPghvvUm0UxHAjugJFpTtvsIzrj7CHda7tIY80vJfm8ga7PoNeSgy3/CTpQRt9vA3LFvq4AlusvZNCdYsF5BkblWql6hWzPTTkbb3JKevm7b3gX5eL3A/Ho8mO52O+G9Ocwh1Phmw2G91P7tkOkocZidsnFDqlclNLbRqEc1NtKxVu2vVDMlgaWsV954Yel+Kj1J2mC5XrLTMAal1XuCkHg5fgy+QLLrBFW3BOqDhx8pkRqdkBeHYrlEWri5MzNGurZKQS79qFSEbS+OXIyIVc/gJQSwMEFAAACAgAAAgh7OUIhIFsAAAAdwAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSs9BRUEovSizIKAYKGII4pZkpIHa0krGhiZFpUkqaSUqSSWJaYqpuioFhsoWFkbGpcXJSqoGlhVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsP23G908CAAD4BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHs5QiEgWwAAAB3AAAACQAkAAAAAAAAAAAAAACcAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFMDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -4478,7 +4478,39 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
@@ -14749,7 +14781,7 @@ GameObject:
   - component: {fileID: 1399085674}
   - component: {fileID: 1399085673}
   - component: {fileID: 1399085672}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: SkeletonArcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14798,8 +14830,6 @@ MonoBehaviour:
   baseHP: 90
   hpModifier: 12
   dmgModifier: 0.008
-  minDmg: 2000
-  maxDmg: 3500
   fireRate: 3
   Arrow: {fileID: 7811048276304385271, guid: 536315be97dfb7140b63ab1b4f9b6366, type: 3}
   Player: {fileID: 1443643382}
@@ -14885,7 +14915,7 @@ GameObject:
   - component: {fileID: 1443643390}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14930,7 +14960,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2, y: 2.14}
+  m_Size: {x: 2.2, y: 2.2}
   m_EdgeRadius: 0
 --- !u!212 &1443643385
 SpriteRenderer:
@@ -15077,6 +15107,7 @@ MonoBehaviour:
   playerMaxShield: 0
   playerCurrentShield: 0
   Arrow: {fileID: 7811048276304385271, guid: 536315be97dfb7140b63ab1b4f9b6366, type: 3}
+  SkeletonArcher: {fileID: 1399085671}
 --- !u!1 &1486072296
 GameObject:
   m_ObjectHideFlags: 0
@@ -15363,7 +15394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875098916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000035762787, y: 1.0000002, z: -10}
+  m_LocalPosition: {x: -0.00000023841858, y: 1.0000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 350048137}

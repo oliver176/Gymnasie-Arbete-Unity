@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - World Collider
+  - SkeletonArcher
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Player
   - Ground
   - Obstacles
-  - 
-  - 
+  - Enemies
+  - Projectiles
   - 
   - 
   - 
