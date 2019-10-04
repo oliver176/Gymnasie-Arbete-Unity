@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowMover : MonoBehaviour
+public class ArrowMover : DamageDealer
 {
     private GameObject player;
     private Rigidbody2D rb2D;

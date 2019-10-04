@@ -33,9 +33,12 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (doesDmg == true)
         {
-            //HurtPlayer(Random.Range(damageDealer.minDmg, damageDealer.maxDmg));
+            //HurtPlayer(Random.Range(classCheck.minDmg, .maxDmg));
         }
-        else return;
+        else
+        {
+            return;
+        }
     }
 
     public void HurtPlayer(float DamageToGive) //metod som skadar player
