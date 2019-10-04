@@ -33,15 +33,12 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (other.gameObject.GetComponent<DamageDealer>().GetType().IsSubclassOf(typeof(DamageDealer)))
         {
-            Debug.Log("MinDmg, MaxDmg " + (DD.minDmg * DD.dmgModifier) + ", " + (DD.maxDmg * DD.dmgModifier));
-            Debug.Log("Player HP: " + playerCurrentHealth);
             HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
         }
     }
 
     public void HurtPlayer(float DamageToGive) //metod som skadar player
     {
-        Debug.Log("DMG : " + DamageToGive);
         if (DamageToGive > playerCurrentShield)
         {
             float x = DamageToGive - playerCurrentShield;  //Tar först bort playerns shieldamount på dmg
