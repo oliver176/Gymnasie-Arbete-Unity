@@ -2,7 +2,7 @@
 
 public class PlayerStats : MonoBehaviour
 {
-    public int level = 1;
+    public int level;
     public float xpToLevelUp;
     public float xpModifierperLvl;
     public static float currentXP = 0;
