@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections; 
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,11 +29,12 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        bool doesDmg = typeof(DamageDealer).IsAssignableFrom(other.gameObject.GetType());
+        DamageDealer DD = other.gameObject.GetComponent<DamageDealer>();
 
-        if (doesDmg == true)
+        if (other.gameObject.GetComponent<DamageDealer>().GetType().IsSubclassOf(typeof(DamageDealer)))
         {
-            //HurtPlayer(Random.Range(classCheck.minDmg, .maxDmg));
+            //Debug.Log("MinDmg, MaxDmg" + (DD.minDmg * DD.dmgModifier) + ", " + (DD.maxDmg * DD.dmgModifier));
+            HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
         }
         else
         {

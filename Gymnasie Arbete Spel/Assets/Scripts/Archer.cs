@@ -6,14 +6,11 @@ public class Archer : Enemy
 {
 
     private bool m_FacingRight = false;  // For determining which way the player is currently facing.
-    public GameObject Player;
     public GameObject Arrow;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerStats playerStats = Player.GetComponent<PlayerStats>();
-
         xpGain = 100;
         baseHP = 90;
         hpModifier = 12;
@@ -23,15 +20,6 @@ public class Archer : Enemy
         maxDmg = 3500;
 
         fireRate = 3;
-        counter = fireRate;
-        
-        enemyLevel = playerStats.level;
-        baseHP = baseHP + (hpModifier * enemyLevel);
-        currentHP = baseHP;
-        dmgModifier *= enemyLevel;
-        minDmg *= dmgModifier;
-        maxDmg *= dmgModifier;
-
         counter = fireRate;
     }
 

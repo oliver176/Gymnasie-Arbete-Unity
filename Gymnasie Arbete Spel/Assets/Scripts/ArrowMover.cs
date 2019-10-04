@@ -17,6 +17,10 @@ public class ArrowMover : DamageDealer
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         playerPos = player.transform.position;
+
+        minDmg = 2000;
+        maxDmg = 3500;
+        dmgModifier = 0.008f;
     }
 
     // Update is called once per frame
