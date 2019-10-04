@@ -2,30 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyArcher : MonoBehaviour
+public class Archer : Enemy
 {
-    int currentHP;
-    public float xpGain = 100;
-    public int baseHP = 90;
-    public int hpModifier = 12;
 
-    public float dmgModifier = 0.008f;
-    public static float minDmg = 2000;
-    public static float maxDmg = 3500;
-
-    public float fireRate;
-    private float counter;
-
-    int playerLevel;
-    int enemyLevel;
     private bool m_FacingRight = false;  // For determining which way the player is currently facing.
-    public GameObject Arrow;
     public GameObject Player;
+    public GameObject Arrow;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerStats playerStats = Player.GetComponent<PlayerStats>();
+
+        xpGain = 100;
+        baseHP = 90;
+        hpModifier = 12;
+
+        dmgModifier = 0.008f;
+        minDmg = 2000;
+        maxDmg = 3500;
+
+        fireRate = 3;
+        counter = fireRate;
+        
         enemyLevel = playerStats.level;
         baseHP = baseHP + (hpModifier * enemyLevel);
         currentHP = baseHP;

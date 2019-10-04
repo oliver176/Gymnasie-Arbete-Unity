@@ -9,8 +9,6 @@ public class PlayerHealthManager : MonoBehaviour
     public float playerMaxShield;
     public float playerCurrentShield;
 
-    public GameObject Arrow;
-    public GameObject SkeletonArcher;
 
     // Start is called before the first frame update
     private void Start()
@@ -18,8 +16,6 @@ public class PlayerHealthManager : MonoBehaviour
         //start värden, fullt hp och 0 shield
         SetMaxHealth();
         playerCurrentShield = 0;
-        ArrowMover arrowMover = Arrow.GetComponent<ArrowMover>();
-        EnemyArcher enemyArcher = SkeletonArcher.GetComponent<EnemyArcher>();
     }
 
     // Update is called once per frame
@@ -33,10 +29,13 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "Arrow" || other.gameObject.name == "SkeletonArcher")
+        bool doesDmg = typeof(DamageDealer).IsAssignableFrom(other.gameObject.GetType());
+
+        if (doesDmg == true)
         {
-            HurtPlayer(Random.Range(EnemyArcher.minDmg, EnemyArcher.maxDmg));
+            HurtPlayer(Random.Range(damageDealer.minDmg, damageDealer.maxDmg));
         }
+        else return;
     }
 
     public void HurtPlayer(float DamageToGive) //metod som skadar player
