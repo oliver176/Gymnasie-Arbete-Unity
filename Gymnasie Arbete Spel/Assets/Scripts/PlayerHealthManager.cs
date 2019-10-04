@@ -33,13 +33,13 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (other.gameObject.GetComponent<DamageDealer>().GetType().IsSubclassOf(typeof(DamageDealer)))
         {
-<<<<<<< HEAD
+
             HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
-=======
+
             Debug.Log("MinDmg, MaxDmg " + (DD.minDmg * DD.dmgModifier) + ", " + (DD.maxDmg * DD.dmgModifier));
             //HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
             HurtPlayer(DD.Damage(DD.SetLevel(), DD));
->>>>>>> parent of 8c81371... dmg fix
+
         }
     }
 
