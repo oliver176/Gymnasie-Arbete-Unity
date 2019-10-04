@@ -21,13 +21,6 @@ public class DamageDealer : MonoBehaviour
         return playerStats.level;
     }
 
-    protected void Scale()
-    {
-        dmgModifier *= level / 2;
-        minDmg *= dmgModifier;
-        maxDmg *= dmgModifier;
-    }
-
     public float Damage(int level, DamageDealer type)
     {
         return Random.Range(type.minDmg * level * type.dmgModifier, type.maxDmg * level * type.dmgModifier);

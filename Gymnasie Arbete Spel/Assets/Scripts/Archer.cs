@@ -13,18 +13,12 @@ public class Archer : Enemy
         baseHP = 90;
         hpModifier = 12;
 
-        GenerateArcher();
-
-        fireRate = 3;
-        counter = fireRate;
-    }
-
-    protected void GenerateArcher()
-    {
         dmgModifier = 0.008f;
         minDmg = 2000;
         maxDmg = 3500;
-        level = SetLevel();
+
+        fireRate = 3;
+        counter = fireRate;
     }
 
     // Update is called once per frame

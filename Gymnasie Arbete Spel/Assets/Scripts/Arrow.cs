@@ -7,7 +7,9 @@ public class Arrow : Archer
     // Start is called before the first frame update
     void Start()
     {
-        GenerateArcher();
+        dmgModifier = 0.008f;
+        minDmg = 2000;
+        maxDmg = 3500;
     }
 
     // Update is called once per frame
