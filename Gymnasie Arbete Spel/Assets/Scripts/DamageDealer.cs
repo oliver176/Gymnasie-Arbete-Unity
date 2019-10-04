@@ -5,7 +5,6 @@ public class DamageDealer : MonoBehaviour
     public float minDmg;
     public float maxDmg;
     public float dmgModifier;
-    public int level;
     public GameObject Player;
 
     // Start is called before the first frame update
@@ -19,11 +18,6 @@ public class DamageDealer : MonoBehaviour
         PlayerStats playerStats = Player.GetComponent<PlayerStats>();
 
         return playerStats.level;
-    }
-
-    public float Damage(int level, DamageDealer type)
-    {
-        return Random.Range(type.minDmg * level * type.dmgModifier, type.maxDmg * level * type.dmgModifier);
     }
 
     // Update is called once per frame

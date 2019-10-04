@@ -13,10 +13,6 @@ public class Archer : Enemy
         baseHP = 90;
         hpModifier = 12;
 
-        dmgModifier = 0.008f;
-        minDmg = 2000;
-        maxDmg = 3500;
-
         fireRate = 3;
         counter = fireRate;
     }
