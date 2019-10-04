@@ -33,7 +33,7 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (doesDmg == true)
         {
-            HurtPlayer(Random.Range(damageDealer.minDmg, damageDealer.maxDmg));
+            //HurtPlayer(Random.Range(damageDealer.minDmg, damageDealer.maxDmg));
         }
         else return;
     }
