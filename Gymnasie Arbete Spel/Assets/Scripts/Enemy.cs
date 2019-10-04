@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : DamageDealer
 {
@@ -11,7 +9,7 @@ public class Enemy : DamageDealer
 
     protected float fireRate;
     protected float counter;
-    
+
     protected int enemyLevel;
 
     public GameObject Player;
@@ -20,7 +18,7 @@ public class Enemy : DamageDealer
     void Start()
     {
         PlayerStats playerStats = Player.GetComponent<PlayerStats>();
-        
+
         enemyLevel = playerStats.level;
         baseHP = baseHP + (hpModifier * enemyLevel);
         currentHP = baseHP;
@@ -29,6 +27,6 @@ public class Enemy : DamageDealer
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
