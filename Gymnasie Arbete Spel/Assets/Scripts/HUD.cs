@@ -35,7 +35,10 @@ public class HUD : MonoBehaviour
         }
 
         statInInt = Mathf.RoundToInt(statToDisplay);
-
+        if (statInInt <= 0 )
+        {
+            statInInt = 0;
+        }
         displayText.text = StatText.tag + statInInt;
     }
 }
