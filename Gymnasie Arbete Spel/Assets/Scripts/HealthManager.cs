@@ -3,15 +3,14 @@ using System.Collections;
 
 public class HealthManager : PlayerStats
 {
-    float timeSinceHurt;
     float shieldPerSecond;
-    bool waiting;
+    bool waitingForShield;
 
     // Start is called before the first frame update
     private void Start()
     {
         //start värden, fullt hp och 0 shield
-        playerMaxHealth = 100;
+        playerMaxHealth = 90 + (10 * level);
         playerCurrentHealth = playerMaxHealth;
         playerMaxShield = 25;
         playerCurrentShield = playerMaxShield;
@@ -22,7 +21,9 @@ public class HealthManager : PlayerStats
     // Update is called once per frame
     private void Update()
     {
-        if(waiting == false)
+        playerMaxHealth = 90 + (10 * level);
+
+        if (waitingForShield == false)
         {
             RechargeShield();
         }
@@ -47,9 +48,9 @@ public class HealthManager : PlayerStats
 
     IEnumerator Timer()
     {
-        waiting = true;
+        waitingForShield = true;
         yield return new WaitForSeconds(5);
-        waiting = false;
+        waitingForShield = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other)

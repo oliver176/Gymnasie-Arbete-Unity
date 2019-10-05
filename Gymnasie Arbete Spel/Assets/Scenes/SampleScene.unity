@@ -15364,7 +15364,6 @@ MonoBehaviour:
   minDmg: 2000
   maxDmg: 3500
   dmgModifier: 0.008
-  Player: {fileID: 1443643382}
   Arrow: {fileID: 7811048276304385271, guid: 536315be97dfb7140b63ab1b4f9b6366, type: 3}
 --- !u!212 &1399085674
 SpriteRenderer:
@@ -15632,9 +15631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7a4acd7541d124ea0dc126bedbaa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCurrentHealth: 0
-  playerCurrentShield: 0
-  level: 0
 --- !u!114 &1443643391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15647,9 +15643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0151f5340260725449b0c32f6c11bf4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCurrentHealth: 0
-  playerCurrentShield: 0
-  level: 0
 --- !u!1 &1486072296
 GameObject:
   m_ObjectHideFlags: 0

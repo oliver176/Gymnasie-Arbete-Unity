@@ -5,7 +5,6 @@ public class DamageDealer : MonoBehaviour
     public float minDmg;
     public float maxDmg;
     public float dmgModifier;
-    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +14,7 @@ public class DamageDealer : MonoBehaviour
 
     public int SetLevel()
     {
-        PlayerStats playerStats = Player.GetComponent<PlayerStats>();
-
-        return playerStats.level;
+        return PlayerStats.level;
     }
 
     protected void XpReward(float xp)

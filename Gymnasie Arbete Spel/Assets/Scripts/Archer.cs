@@ -2,13 +2,15 @@
 
 public class Archer : Enemy
 {
-
     private bool m_FacingRight = false;  // For determining which way the player is currently facing.
     public GameObject Arrow;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
+
         xpWorth = 100;
         baseHP = 90;
         currentHP = baseHP;
@@ -30,13 +32,13 @@ public class Archer : Enemy
         }
 
         // If the input is moving the player right and the player is facing left...
-        if (Player.transform.position.x > transform.position.x && !m_FacingRight)
+        if (player.transform.position.x > transform.position.x && !m_FacingRight)
         {
             // ... flip the player.
             Flip();
         }
         // Otherwise if the input is moving the player left and the player is facing right...
-        else if (Player.transform.position.x < transform.position.x && m_FacingRight)
+        else if (player.transform.position.x < transform.position.x && m_FacingRight)
         {
             // ... flip the player.
             Flip();
