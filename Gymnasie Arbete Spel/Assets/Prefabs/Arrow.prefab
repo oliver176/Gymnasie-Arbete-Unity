@@ -90,10 +90,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7811048276304385275}
   - component: {fileID: 1864836120343695863}
-  - component: {fileID: 1559961884826379683}
   - component: {fileID: -1611010628466491943}
   - component: {fileID: 1653084189433526756}
   - component: {fileID: 9066442999698933832}
+  - component: {fileID: 4549173431518925510}
   m_Layer: 12
   m_Name: Arrow
   m_TagString: Untagged
@@ -129,27 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 2000
---- !u!50 &1559961884826379683
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7811048276304385271}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &-1611010628466491943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207,6 +186,25 @@ MonoBehaviour:
   minDmg: 2000
   maxDmg: 3500
   dmgModifier: 0.008
-  level: 0
-  Player: {fileID: 0}
   Arrow: {fileID: 0}
+--- !u!50 &4549173431518925510
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811048276304385271}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
