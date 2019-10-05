@@ -16317,9 +16317,9 @@ GameObject:
   - component: {fileID: 1836559948}
   - component: {fileID: 1836559946}
   - component: {fileID: 1836559947}
+  - component: {fileID: 1836559951}
   - component: {fileID: 1836559945}
   - component: {fileID: 1836559950}
-  - component: {fileID: 1836559951}
   m_Layer: 8
   m_Name: Skeleton_warr
   m_TagString: Untagged
