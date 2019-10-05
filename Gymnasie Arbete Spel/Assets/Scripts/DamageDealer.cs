@@ -14,12 +14,12 @@ public class DamageDealer : MonoBehaviour
 
     public int SetLevel()
     {
-        return PlayerStats.level;
+        return Player.level;
     }
 
     protected void XpReward(float xp)
     {
-        PlayerStats.currentXP += xp;
+        Player.currentXP += xp;
     }
 
     // Update is called once per frame

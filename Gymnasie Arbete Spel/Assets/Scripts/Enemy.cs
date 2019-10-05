@@ -3,7 +3,7 @@
 public class Enemy : DamageDealer
 {
     protected float currentHP;
-    protected float xpWorth;
+    protected float xpWorth = 100;
     protected float baseHP;
     protected float hpModifier;
 
@@ -20,5 +20,14 @@ public class Enemy : DamageDealer
     void Update()
     {
 
+    }
+
+    protected void DeadCheck(GameObject Enemy, float hp)
+    {
+        if (hp <= 0)
+        {
+            Destroy(Enemy);
+            XpReward(xpWorth);
+        }
     }
 }
