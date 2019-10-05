@@ -2,10 +2,10 @@
 
 public class Enemy : DamageDealer
 {
-    protected int currentHP;
-    protected float xpGain;
-    protected int baseHP;
-    protected int hpModifier;
+    protected float currentHP;
+    protected float xpWorth;
+    protected float baseHP;
+    protected float hpModifier;
 
     protected float fireRate;
     protected float counter;

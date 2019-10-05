@@ -9,13 +9,10 @@ public class Archer : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        xpGain = 100;
+        xpWorth = 100;
         baseHP = 90;
+        currentHP = baseHP;
         hpModifier = 12;
-
-        dmgModifier = 0.008f;
-        minDmg = 2000;
-        maxDmg = 3500;
 
         fireRate = 3;
         counter = fireRate;
@@ -46,8 +43,9 @@ public class Archer : Enemy
         }
         if (currentHP <= 0)
         {
-            //Destroy(gameObject);
-            PlayerStats.XPGain(xpGain);
+            Destroy(gameObject);
+            // add xp gain method
+            XpReward(xpWorth);
         }
     }
     private void Flip()

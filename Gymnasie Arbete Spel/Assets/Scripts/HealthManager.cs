@@ -1,20 +1,13 @@
 ﻿using UnityEngine;
 
-public class PlayerHealthManager : MonoBehaviour
+public class HealthManager : PlayerStats
 {
-    public float playerMaxHealth = 100;
-    float playerCurrentHealth;
-    public float playerMaxShield;
-    float playerCurrentShield;
-    public GameObject Player;
-
     // Start is called before the first frame update
     private void Start()
     {
         //start värden, fullt hp och 0 shield
-        PlayerStats playerStats = Player.GetComponent<PlayerStats>();
-        playerMaxHealth += 10 * (playerStats.level - 1);
-        SetMaxHealth();
+        playerMaxHealth = 100;
+        playerCurrentHealth = playerMaxHealth;
         playerCurrentShield = 0;
     }
 
@@ -33,13 +26,8 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (other.gameObject.GetComponent<DamageDealer>().GetType().IsSubclassOf(typeof(DamageDealer)))
         {
-
-            HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
-
             Debug.Log("MinDmg, MaxDmg " + (DD.minDmg * DD.dmgModifier) + ", " + (DD.maxDmg * DD.dmgModifier));
-            //HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
-            HurtPlayer(DD.Damage(DD.SetLevel(), DD));
-
+            HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
         }
     }
 

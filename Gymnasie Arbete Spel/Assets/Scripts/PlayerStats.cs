@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : Player
 {
-    public int level;
-    public float xpToLevelUp;
-    public float xpModifierperLvl;
     public static float currentXP = 0;
+    protected int xpToLevelUp;
+    protected int xpModifierperLvl;
+    protected float playerMaxHealth;
+    protected float playerMaxShield;
+    protected float playerCurrentHealth;
+    protected float playerCurrentShield;
+    public int level = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        XPToLevelUp();
+        LevelUp();
+        SetUp();
     }
 
     // Update is called once per frame
@@ -19,22 +24,24 @@ public class PlayerStats : MonoBehaviour
         LevelUpCheck();
     }
 
-    void XPToLevelUp()
+    protected void SetUp()
     {
+        playerMaxHealth = 100;
+    }
+
+    void LevelUp()
+    {
+        level++;
         xpToLevelUp += xpModifierperLvl * (level - 1);
         //xpToLevelUp = (xpToLevelUp * 1.07f) + (23 * (level - 1) + 1);
+        playerMaxHealth += 10 * (level - 1);
     }
 
     void LevelUpCheck()
     {
         if (currentXP == xpToLevelUp)
         {
-            level++;
+            LevelUp();
         }
-    }
-
-    public static void XPGain(float xp)
-    {
-        currentXP += xp;
     }
 }

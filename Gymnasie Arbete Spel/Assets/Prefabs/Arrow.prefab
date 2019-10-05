@@ -204,3 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbbadde863d09c4b96989255b058356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDmg: 2000
+  maxDmg: 3500
+  dmgModifier: 0.008
+  level: 0
+  Player: {fileID: 0}
+  Arrow: {fileID: 0}
