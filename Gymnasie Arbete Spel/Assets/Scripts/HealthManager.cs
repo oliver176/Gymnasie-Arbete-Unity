@@ -1,23 +1,55 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class HealthManager : PlayerStats
 {
+    float timeSinceHurt;
+    float shieldPerSecond;
+    bool waiting;
+
     // Start is called before the first frame update
     private void Start()
     {
         //start värden, fullt hp och 0 shield
         playerMaxHealth = 100;
         playerCurrentHealth = playerMaxHealth;
-        playerCurrentShield = 0;
+        playerMaxShield = 25;
+        playerCurrentShield = playerMaxShield;
+        shieldRechargeDelay = 5;
+        shieldPerSecond = playerMaxShield / shieldRechargeDelay;
     }
 
     // Update is called once per frame
     private void Update()
     {
+        if(waiting == false)
+        {
+            RechargeShield();
+        }
+        if (playerCurrentShield < 0)
+        {
+            playerCurrentShield = 0;
+        }
+        if (playerCurrentShield > playerMaxShield)
+        {
+            playerCurrentShield = playerMaxShield;
+        }
         if (playerCurrentHealth < 0) //om player dör, avaktivera player och aktivera restartUI
         {
             gameObject.SetActive(false);
         }
+    }
+
+    void RechargeShield()
+    {
+        playerCurrentShield += shieldPerSecond * Time.deltaTime;
+    }
+
+    IEnumerator Timer()
+    {
+        waiting = true;
+        yield return new WaitForSeconds(5);
+        waiting = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -28,6 +60,7 @@ public class HealthManager : PlayerStats
         {
             Debug.Log("MinDmg, MaxDmg " + (DD.minDmg * DD.dmgModifier) + ", " + (DD.maxDmg * DD.dmgModifier));
             HurtPlayer(Random.Range(DD.minDmg * DD.dmgModifier, DD.maxDmg * DD.dmgModifier));
+            StartCoroutine(Timer());
         }
     }
 

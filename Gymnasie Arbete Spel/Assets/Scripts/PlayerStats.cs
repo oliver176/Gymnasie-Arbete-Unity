@@ -7,6 +7,7 @@ public class PlayerStats : Player
     protected int xpModifierperLvl;
     protected float playerMaxHealth;
     protected float playerMaxShield;
+    protected float shieldRechargeDelay;
     public float playerCurrentHealth;
     public float playerCurrentShield;
     public int level = 0;
