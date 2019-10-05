@@ -7,8 +7,8 @@ public class PlayerStats : Player
     protected int xpModifierperLvl;
     protected float playerMaxHealth;
     protected float playerMaxShield;
-    protected float playerCurrentHealth;
-    protected float playerCurrentShield;
+    public float playerCurrentHealth;
+    public float playerCurrentShield;
     public int level = 0;
 
     // Start is called before the first frame update
