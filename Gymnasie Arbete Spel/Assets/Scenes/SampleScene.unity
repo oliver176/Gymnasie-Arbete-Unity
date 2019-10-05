@@ -15527,7 +15527,7 @@ GameObject:
   m_Layer: 0
   m_Name: groundDetection
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -16382,7 +16382,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6875, y: 1}
+    oldSize: {x: 1.34375, y: 1.15625}
     newSize: {x: 0.6875, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16493,7 +16493,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6875, y: 1}
+    oldSize: {x: 1.34375, y: 1.15625}
     newSize: {x: 0.6875, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16501,17 +16501,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.3133998, y: 0.49946404}
-      - {x: 0.28036118, y: 0.5}
-      - {x: 0.061261415, y: 0.34375286}
-      - {x: 0.061827898, y: 0.31545734}
-      - {x: 0.15667415, y: 0.18335342}
-      - {x: 0.15778506, y: -0.50104237}
-      - {x: 0.18790317, y: -0.50104237}
-      - {x: 0.18943149, y: 0.18449497}
-      - {x: 0.2796241, y: 0.1861887}
-      - {x: 0.3442316, y: 0.2817917}
-      - {x: 0.34479272, y: 0.46767616}
+    - - {x: -0.0048887134, y: 0.548584}
+      - {x: -0.22324514, y: 0.5557089}
+      - {x: -0.42794564, y: 0.48840714}
+      - {x: -0.5733361, y: 0.36544514}
+      - {x: -0.572672, y: 0.29080486}
+      - {x: -0.140625, y: 0.234375}
+      - {x: -0.234375, y: 0.046875}
+      - {x: -0.328125, y: -0.015625}
+      - {x: -0.32825023, y: -0.60931206}
+      - {x: 0.6629175, y: -0.578125}
+      - {x: 0.64801836, y: -0.12189007}
+      - {x: 0.5705044, y: 0.14849854}
+      - {x: 0.3597244, y: 0.3983984}
+      - {x: 0.17463917, y: 0.49459553}
 --- !u!1 &1875098916
 GameObject:
   m_ObjectHideFlags: 0
