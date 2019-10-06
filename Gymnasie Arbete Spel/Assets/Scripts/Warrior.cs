@@ -20,11 +20,21 @@ public class Warrior : Enemy
     private void Update()
     {
         isDead = DeadCheck(currentHP);
-
+        if (isDead)
+        {
+            anim.SetBool("WarriorDead", true);
+            Timer();
+            Destroy(gameObject);
+            
+        }
         if (withinRange) //om player inom range
         {
 
         }
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(10);
     }
 
     private void OnTriggerStay2D(Collider2D other)
