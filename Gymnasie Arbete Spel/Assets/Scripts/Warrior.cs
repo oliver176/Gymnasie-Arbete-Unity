@@ -12,7 +12,7 @@ public class Warrior : Enemy
     {
         anim = GetComponent<Animator>();
 
-        hpModifier = 12;
+        hpModifier = 15;
         baseHP = 90 + (hpModifier * SetLevel());
         currentHP = baseHP;
     }
