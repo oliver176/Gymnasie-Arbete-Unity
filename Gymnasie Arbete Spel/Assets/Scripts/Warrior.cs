@@ -9,6 +9,7 @@ public class Warrior : Enemy
     bool withinRange = false;
     private Animator anim;
     public Image healthBar;
+    private Rigidbody2D rb2d;
 
     private void Start()
     {
@@ -17,6 +18,8 @@ public class Warrior : Enemy
         hpModifier = 15;
         baseHP = 90 + (hpModifier * SetLevel());
         currentHP = baseHP;
+
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -29,17 +32,21 @@ public class Warrior : Enemy
         isDead = DeadCheck(currentHP);
         if (isDead)
         {
+            rb2d.gravityScale = 0;
             anim.SetBool("WarriorDead", true);
-            Destroy(this.gameObject);
-            
+            StartCoroutine("DeathTimer");
         }
         if (withinRange) //om player inom range
         {
 
         }
     }
-
-    IEnumerator Timer()
+    IEnumerator DeathTimer()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(this.gameObject);
+    }
+    IEnumerator AttackTimer()
     {
         yield return new WaitForSeconds(2);
         anim.SetBool("WarriorAttackRange", false);

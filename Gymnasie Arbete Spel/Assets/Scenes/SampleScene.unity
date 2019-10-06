@@ -367,7 +367,7 @@ RectTransform:
   - {fileID: 1429847349}
   - {fileID: 1346712644}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15651,6 +15651,7 @@ MonoBehaviour:
   minDmg: 2000
   maxDmg: 3500
   dmgModifier: 0.008
+  isDead: 0
   Arrow: {fileID: 7811048276304385271, guid: 536315be97dfb7140b63ab1b4f9b6366, type: 3}
 --- !u!212 &1399085674
 SpriteRenderer:
@@ -16343,6 +16344,46 @@ PrefabInstance:
     - target: {fileID: 2387732203508599587, guid: 01437fe7f632cb349a59b65cc21017fa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599582, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.03125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599582, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599582, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599582, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599582, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599582, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599583, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387732203508599583, guid: 01437fe7f632cb349a59b65cc21017fa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
