@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior : MonoBehaviour
+public class Warrior : Enemy
 {
     bool withinRange = false;
+
     private void Start()
     {
-        
+        hpModifier = 12;
+        baseHP = 90 + (hpModifier * SetLevel());
+        currentHP = baseHP;
     }
+
     private void Update()
     {
+        DeadCheck(gameObject, currentHP);
+
         if (withinRange) //om player inom range
         {
 
