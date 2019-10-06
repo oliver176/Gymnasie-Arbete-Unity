@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Warrior : Enemy
 {
     bool withinRange = false;
     private Animator anim;
+    public Image healthBar;
 
     private void Start()
     {
@@ -19,6 +21,11 @@ public class Warrior : Enemy
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            healthBar.fillAmount = TakeDamage(10, currentHP, baseHP, healthBar);
+            currentHP -= 10;
+        }
         isDead = DeadCheck(currentHP);
         if (isDead)
         {
@@ -31,6 +38,7 @@ public class Warrior : Enemy
 
         }
     }
+
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(2);

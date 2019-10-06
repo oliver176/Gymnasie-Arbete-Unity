@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : DamageDealer
 {
@@ -20,6 +21,14 @@ public class Enemy : DamageDealer
     void Update()
     {
 
+    }
+
+    protected float TakeDamage(float amount, float currentHP, float baseHP, Image healthBar)
+    {
+        currentHP -= amount;
+        healthBar.fillAmount = currentHP / baseHP;
+
+        return healthBar.fillAmount;
     }
 
     protected bool DeadCheck(float hp)
