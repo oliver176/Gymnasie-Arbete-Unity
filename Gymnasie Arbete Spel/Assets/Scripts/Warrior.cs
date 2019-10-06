@@ -19,7 +19,7 @@ public class Warrior : Enemy
 
     private void Update()
     {
-        DeadCheck(gameObject, currentHP);
+        isDead = DeadCheck(currentHP);
 
         if (withinRange) //om player inom range
         {

@@ -22,7 +22,7 @@ public class Archer : Enemy
     // Update is called once per frame
     void Update()
     {
-        DeadCheck(gameObject, currentHP);
+        isDead = DeadCheck(currentHP);
 
         counter -= Time.deltaTime;
 

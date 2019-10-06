@@ -22,12 +22,13 @@ public class Enemy : DamageDealer
 
     }
 
-    protected void DeadCheck(GameObject Enemy, float hp)
+    protected bool DeadCheck(float hp)
     {
         if (hp <= 0)
         {
-            Destroy(Enemy);
             XpReward(xpWorth);
+            return true;
         }
+        else return false;
     }
 }
