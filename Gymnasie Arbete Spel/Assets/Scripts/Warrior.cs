@@ -23,8 +23,7 @@ public class Warrior : Enemy
         if (isDead)
         {
             anim.SetBool("WarriorDead", true);
-            Timer();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
             
         }
         if (withinRange) //om player inom range
@@ -34,7 +33,8 @@ public class Warrior : Enemy
     }
     IEnumerator Timer()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(2);
+        anim.SetBool("WarriorAttackRange", false);
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -50,7 +50,7 @@ public class Warrior : Enemy
         if (other.gameObject.name == "Player")  //när player lämnar collidern
         {
             withinRange = false;
-            anim.SetBool("WarriorAttackRange", false);
+            StartCoroutine("Timer");
         }
     }
 }
