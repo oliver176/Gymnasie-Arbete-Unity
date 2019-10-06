@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
         }
-
     }
 
     void FixedUpdate()
