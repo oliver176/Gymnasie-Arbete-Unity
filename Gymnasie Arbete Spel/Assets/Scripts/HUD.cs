@@ -8,7 +8,7 @@ public class HUD : MonoBehaviour
     public Text displayText;
     float statToDisplay;
     int statInInt;
-    public GameObject Player;
+    public GameObject PlayerObject;
     public GameObject StatText;
 
     // Start is called before the first frame update
@@ -23,11 +23,11 @@ public class HUD : MonoBehaviour
     {
         if (StatText.name.Contains("Health"))
         {
-            statToDisplay = PlayerStats.playerCurrentHealth;
+            statToDisplay = Player.playerCurrentHealth;
         }
         if (StatText.name.Contains("Shield"))
         {
-            statToDisplay = PlayerStats.playerCurrentShield;
+            statToDisplay = Player.playerCurrentShield;
         }
 
         statInInt = Mathf.RoundToInt(statToDisplay);
