@@ -258,6 +258,7 @@ MonoBehaviour:
   minDmg: 0
   maxDmg: 0
   dmgModifier: 0
+  healthBar: {fileID: 0}
 --- !u!58 &2387732203508599579
 CircleCollider2D:
   m_ObjectHideFlags: 0
