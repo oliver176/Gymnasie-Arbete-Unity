@@ -52,7 +52,6 @@ public class Warrior : Enemy
         yield return new WaitForSeconds(2);
         anim.SetBool("WarriorAttackRange", false);
     }
-
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")  //inom collidern som representerar range

@@ -31,9 +31,6 @@ public class WarriorMover : Warrior
             {
                 Flip();
             }
-            
-            
-           
         }
         if (anim.GetBool("WarriorDead") == false && anim.GetBool("WarriorAttackRange") == false)
         {
