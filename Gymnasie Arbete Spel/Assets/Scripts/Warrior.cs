@@ -29,6 +29,7 @@ public class Warrior : Enemy
             healthBar.fillAmount = TakeDamage(10, currentHP, baseHP, healthBar);
             currentHP -= 10;
         }
+
         isDead = DeadCheck(currentHP);
         if (isDead)
         {
@@ -56,7 +57,6 @@ public class Warrior : Enemy
     {
         if (other.gameObject.name == "Player")  //inom collidern som representerar range
         {
-            withinRange = true;
             anim.SetBool("WarriorAttackRange", true);
         }
     }
@@ -64,7 +64,7 @@ public class Warrior : Enemy
     {
         if (other.gameObject.name == "Player")  //när player lämnar collidern
         {
-            withinRange = false;
+            anim.SetBool("WarriorAttackRange", false);
             StartCoroutine("Timer");
         }
     }

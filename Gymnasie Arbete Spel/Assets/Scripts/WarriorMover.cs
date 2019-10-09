@@ -21,8 +21,21 @@ public class WarriorMover : Warrior
     // Update is called once per frame
     private void Update()
     {
-
-        if (anim.GetBool("WarriorDead") == false)
+        if (anim.GetBool("WarriorDead") == false && anim.GetBool("WarriorAttackRange"))
+        {
+            if (movingRight)
+            {
+                Flip();
+            }
+            else if (!movingRight)
+            {
+                Flip();
+            }
+            
+            
+           
+        }
+        if (anim.GetBool("WarriorDead") == false && anim.GetBool("WarriorAttackRange") == false)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
 
@@ -43,5 +56,15 @@ public class WarriorMover : Warrior
                 }
             }
         }
+    }
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        movingRight = !movingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }
