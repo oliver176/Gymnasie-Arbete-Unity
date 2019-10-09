@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Archer : Enemy
 {
     private bool m_FacingRight = false;  // For determining which way the player is currently facing.
     public GameObject Arrow;
     private GameObject Player;
+    public Image healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,12 @@ public class Archer : Enemy
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            healthBar.fillAmount = TakeDamage(10, currentHP, baseHP);
+            currentHP -= 10;
+        }
+
         isDead = DeadCheck(currentHP);
 
         counter -= Time.deltaTime;

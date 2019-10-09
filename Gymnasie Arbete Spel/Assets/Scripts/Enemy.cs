@@ -23,12 +23,12 @@ public class Enemy : DamageDealer
 
     }
 
-    protected float TakeDamage(float amount, float currentHP, float baseHP, Image healthBar)
+    protected float TakeDamage(float amount, float currentHP, float baseHP)
     {
         currentHP -= amount;
-        healthBar.fillAmount = currentHP / baseHP;
+       float hpFill= currentHP / baseHP;
 
-        return healthBar.fillAmount;
+        return hpFill;
     }
 
     protected bool DeadCheck(float hp)
