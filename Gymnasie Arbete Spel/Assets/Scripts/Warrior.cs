@@ -26,7 +26,7 @@ public class Warrior : Enemy
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            healthBar.fillAmount = TakeDamage(10, currentHP, baseHP, healthBar);
+            healthBar.fillAmount = TakeDamage(10, currentHP, baseHP);
             currentHP -= 10;
         }
 
