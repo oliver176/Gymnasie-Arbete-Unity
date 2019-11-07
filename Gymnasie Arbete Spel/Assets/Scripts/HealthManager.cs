@@ -5,10 +5,12 @@ public class HealthManager : PlayerStats
 {
     float shieldPerSecond;
     bool waitingForShield;
+    private Animator anim;
 
     // Start is called before the first frame update
     private void Start()
     {
+        anim = GetComponent<Animator>();
         //start värden, fullt hp och 0 shield
         playerMaxHealth = 90 + (10 * level);
         playerCurrentHealth = playerMaxHealth;
@@ -38,7 +40,8 @@ public class HealthManager : PlayerStats
         }
         if (playerCurrentHealth < 0) //om player dör, avaktivera player och aktivera restartUI
         {
-            gameObject.SetActive(false);
+            anim.SetBool("IsDead", true);
+            StartCoroutine("DeathTimer");
         }
     }
 
@@ -46,7 +49,11 @@ public class HealthManager : PlayerStats
     {
         playerCurrentShield += shieldPerSecond * Time.deltaTime;
     }
-
+    IEnumerator DeathTimer()
+    {
+        yield return new WaitForSeconds(5);
+        gameObject.SetActive(false);
+    }
     IEnumerator Timer()
     {
         waitingForShield = true;
