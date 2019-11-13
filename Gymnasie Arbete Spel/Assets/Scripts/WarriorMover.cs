@@ -9,6 +9,7 @@ public class WarriorMover : Warrior
 
     public Transform groundDetection;
     public Transform wallDetection;
+    public GameObject Player;
 
     private Animator anim;
 
@@ -16,18 +17,21 @@ public class WarriorMover : Warrior
     private void Start()
     {
         anim = GetComponent<Animator>();
+        Player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     private void Update()
     {
+        float direction = Player.transform.position.x - transform.position.x;
+
         if (anim.GetBool("WarriorDead") == false && anim.GetBool("WarriorAttackRange"))
         {
-            if (movingRight)
+            if (direction < 0 && movingRight)
             {
                 Flip();
             }
-            else if (!movingRight)
+            else if (direction > 0 && !movingRight)
             {
                 Flip();
             }
@@ -57,7 +61,14 @@ public class WarriorMover : Warrior
     private void Flip()
     {
         // Switch the way the player is labelled as facing.
-        movingRight = !movingRight;
+        if (movingRight)
+        {
+            movingRight = !movingRight;
+        }
+        else
+        {
+
+        }
 
         // Multiply the player's x local scale by -1.
         Vector3 theScale = transform.localScale;
