@@ -186,7 +186,9 @@ MonoBehaviour:
   minDmg: 2000
   maxDmg: 3500
   dmgModifier: 0.008
+  isDead: 0
   Arrow: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!50 &4549173431518925510
 Rigidbody2D:
   serializedVersion: 4
