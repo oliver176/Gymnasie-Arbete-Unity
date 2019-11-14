@@ -11,6 +11,8 @@ public class WarriorMover : Warrior
     public Transform wallDetection;
     public GameObject Player;
 
+    private SpriteRenderer sprite;
+
     private Animator anim;
 
     // Start is called before the first frame update
@@ -18,6 +20,7 @@ public class WarriorMover : Warrior
     {
         anim = GetComponent<Animator>();
         Player = GameObject.Find("Player");
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -60,19 +63,30 @@ public class WarriorMover : Warrior
     }
     private void Flip()
     {
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
         // Switch the way the player is labelled as facing.
-        if (movingRight)
+        /*if (movingRight)
         {
-            movingRight = !movingRight;
+            movingRight = false;
+            //transform.localScale = theScale;
+            sprite.flipX = true;
         }
         else
         {
-
+            movingRight = true;
+            //transform.localScale = theScale;
+            sprite.flipX = false;
+        }*/
+        if (movingRight == true)
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+            movingRight = false;
         }
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            movingRight = true;
+        }
     }
 }
