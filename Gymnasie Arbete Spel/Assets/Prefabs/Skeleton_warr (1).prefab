@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: groundDetection
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2387732203216301029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.001, y: -0.44, z: 0}
+  m_LocalPosition: {x: 1, y: -0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387732203508599587}
@@ -201,7 +201,7 @@ PolygonCollider2D:
       - {x: -0.140625, y: 0.234375}
       - {x: -0.234375, y: 0.046875}
       - {x: -0.328125, y: -0.015625}
-      - {x: -0.32825023, y: -0.60931206}
+      - {x: -0.34539306, y: -0.57501173}
       - {x: 0.6629175, y: -0.578125}
       - {x: 0.64801836, y: -0.12189007}
       - {x: 0.5705044, y: 0.14849854}
@@ -225,10 +225,11 @@ MonoBehaviour:
   isDead: 0
   healthBar: {fileID: 0}
   speed: 1
-  distance: 1
+  distance: 0.3
   movingRight: 1
   groundDetection: {fileID: 2387732203216301028}
   wallDetection: {fileID: 2387732203606412950}
+  Player: {fileID: 0}
 --- !u!95 &2387732203508599581
 Animator:
   serializedVersion: 3
