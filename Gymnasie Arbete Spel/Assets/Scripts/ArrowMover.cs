@@ -33,9 +33,10 @@ public class ArrowMover : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "World Collider" || other.gameObject.tag == "Player")
+        /*if (other.gameObject.tag == "World Collider" || other.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
-        }
+        }*/
+        Destroy(this.gameObject);
     }
 }
