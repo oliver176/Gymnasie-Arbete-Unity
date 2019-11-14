@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ArrowMover : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ArrowMover : MonoBehaviour
     private Vector3 playerPos;
 
     private Vector2 direction;
+
+    bool hasCollided = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +32,35 @@ public class ArrowMover : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb2D.AddForce(direction * thrust * Time.smoothDeltaTime);
+        if (!hasCollided)
+        {
+            rb2D.AddForce(direction * thrust * Time.smoothDeltaTime);
+            //gameObject.transform.Translate(direction * thrust * Time.deltaTime);
+        }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        /*if (other.gameObject.tag == "World Collider" || other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "World Collider")
         {
-            Destroy(this.gameObject);
-        }*/
-        Destroy(this.gameObject);
+            GetComponent<Collider2D>().enabled = false;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        hasCollided = true;
+
+        rb2D.velocity = Vector2.zero;
+        rb2D.angularVelocity = 0.0f;
+        rb2D.isKinematic = false;
+
+        StartCoroutine("DestroyTimer");
+    }
+
+    IEnumerator DestroyTimer()
+    {
+        yield return new WaitForSeconds(15);
+        Destroy(gameObject);
     }
 }
