@@ -7,6 +7,7 @@ public class ArrowMover : MonoBehaviour
     public int thrust;
     private Vector3 playerPos;
 
+    private Vector2 direction;
 
     // Start is called before the first frame update
     void Start()
@@ -14,8 +15,8 @@ public class ArrowMover : MonoBehaviour
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         playerPos = player.transform.position;
-        
-        Vector2 direction = player.transform.position - transform.position;
+
+        direction = (player.transform.position - transform.position).normalized ;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 1000);
@@ -28,7 +29,7 @@ public class ArrowMover : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb2D.AddForce((playerPos - transform.position).normalized * thrust * Time.smoothDeltaTime);
+        rb2D.AddForce(direction * thrust * Time.smoothDeltaTime);
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
