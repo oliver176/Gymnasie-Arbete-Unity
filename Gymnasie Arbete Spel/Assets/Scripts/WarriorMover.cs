@@ -63,21 +63,6 @@ public class WarriorMover : Warrior
     }
     private void Flip()
     {
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        // Switch the way the player is labelled as facing.
-        /*if (movingRight)
-        {
-            movingRight = false;
-            //transform.localScale = theScale;
-            sprite.flipX = true;
-        }
-        else
-        {
-            movingRight = true;
-            //transform.localScale = theScale;
-            sprite.flipX = false;
-        }*/
         if (movingRight == true)
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
