@@ -15929,7 +15929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1443643387}
-  runSpeed: 40
+  runSpeed: 35
 --- !u!114 &1443643390
 MonoBehaviour:
   m_ObjectHideFlags: 0
