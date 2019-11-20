@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public static float playerCurrentShield;
     public static int level = 0;
 
+    public GameObject MagicBall;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            //Instantiate(, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(MagicBall, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
         }
     }
 }
