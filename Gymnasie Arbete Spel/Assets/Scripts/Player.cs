@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            //Instantiate(, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+        }
     }
 }
