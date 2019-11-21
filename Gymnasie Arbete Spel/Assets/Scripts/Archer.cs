@@ -63,4 +63,16 @@ public class Archer : Enemy
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Player p = other.gameObject.GetComponent<Player>();
+
+        if (other.gameObject.GetComponent<Player>().GetType().IsSubclassOf(typeof(Player)))
+        {
+            if (true)
+            {
+
+            }
+        }
+    }
 }
