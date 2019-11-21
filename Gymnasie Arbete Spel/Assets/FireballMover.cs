@@ -3,8 +3,8 @@
 public class FireballMover : CharacterController2D
 {
     public float projectileSpeed;
-    Vector2 direction;
-    bool facingRight;
+    private Vector2 direction;
+    private bool facingRight;
 
     // Start is called before the first frame update
     private void Start()
@@ -36,6 +36,7 @@ public class FireballMover : CharacterController2D
             transform.Translate(Vector2.left * projectileSpeed);
         }
     }
+
     private void Flip()
     {
         // Multiply the player's x local scale by -1.
@@ -43,11 +44,9 @@ public class FireballMover : CharacterController2D
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "World Collider")
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
