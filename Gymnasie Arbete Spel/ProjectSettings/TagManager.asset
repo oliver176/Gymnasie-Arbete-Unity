@@ -8,6 +8,8 @@ TagManager:
   - SkeletonArcher
   - 'Health: '
   - 'Shield: '
+  - MagicAttack
+  - PhysicalAttack
   layers:
   - Default
   - TransparentFX

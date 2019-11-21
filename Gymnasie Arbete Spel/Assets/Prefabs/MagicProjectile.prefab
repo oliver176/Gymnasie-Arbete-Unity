@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6821113420552917286}
   m_Layer: 12
   m_Name: MagicProjectile
-  m_TagString: Untagged
+  m_TagString: MagicAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
