@@ -5,6 +5,8 @@ using UnityEngine;
 public class Attack : PlayerStats
 {
     // Start is called before the first frame update
+    public GameObject magicBall;
+
     void Start()
     {
         
@@ -30,6 +32,9 @@ public class Attack : PlayerStats
 
     void Cast()
     {
+        
+        Instantiate(magicBall, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+        
         Debug.Log("HADOUKEN!!!");
     }
 }
