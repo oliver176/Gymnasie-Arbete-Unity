@@ -32,6 +32,6 @@ public class Attack : PlayerStats
 
     void CastFireball()
     {
-        Instantiate(Fireball, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+        Instantiate(Fireball, new Vector3(transform.position.x, transform.position.y, -1), transform.rotation);
     }
 }
