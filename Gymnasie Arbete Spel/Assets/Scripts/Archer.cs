@@ -65,14 +65,11 @@ public class Archer : Enemy
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Player p = other.gameObject.GetComponent<Player>();
-
-        if (other.gameObject.GetComponent<Player>().GetType().IsSubclassOf(typeof(Player)))
+        if (other.gameObject.tag == "MagicAttack")
         {
-            if (true)
-            {
-
-            }
+            float dmg = Random.Range(PlayerStats.minMagiDmg, PlayerStats.maxMagiDmg);
+            healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
+            currentHP -= dmg;
         }
     }
 }
