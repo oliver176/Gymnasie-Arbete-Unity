@@ -26,7 +26,7 @@ public class Enemy : DamageDealer
     protected float TakeDamage(float amount, float currentHP, float baseHP)
     {
         currentHP -= amount;
-        float hpFill= currentHP / baseHP;
+       float hpFill= currentHP / baseHP;
 
         return hpFill;
     }
