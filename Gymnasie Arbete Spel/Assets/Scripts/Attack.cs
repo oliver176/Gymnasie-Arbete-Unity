@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Attack : PlayerStats
 {
+    public GameObject Fireball;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class Attack : PlayerStats
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Cast();
+            CastFireball();
         }
     }
 
@@ -28,8 +30,8 @@ public class Attack : PlayerStats
         Debug.Log("HAJAAA!!!");
     }
 
-    void Cast()
+    void CastFireball()
     {
-        Debug.Log("HADOUKEN!!!");
+        Instantiate(Fireball, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
     }
 }

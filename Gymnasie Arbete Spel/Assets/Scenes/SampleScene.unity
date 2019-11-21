@@ -4837,7 +4837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2999997, y: 3.0300002, z: -10}
+  m_LocalPosition: {x: 2.2999997, y: 3.0300002, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15908,7 +15908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443643382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3, y: 2.03, z: 0}
+  m_LocalPosition: {x: 2.3, y: 2.03, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1486072297}
@@ -15966,6 +15966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c961fff42d8bc247b6505e5abfc0d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fireball: {fileID: 1867912927257745800, guid: ae59cbd33b025574aa768da124549f82,
+    type: 3}
 --- !u!95 &1443643393
 Animator:
   serializedVersion: 3
@@ -16419,7 +16421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875098916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2999997, y: 3.0300002, z: -10}
+  m_LocalPosition: {x: 2.2999997, y: 3.0300002, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 350048137}
@@ -16528,7 +16530,7 @@ PrefabInstance:
     - target: {fileID: 8005086315320209019, guid: ae59cbd33b025574aa768da124549f82,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.1489453
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8005086315320209019, guid: ae59cbd33b025574aa768da124549f82,
         type: 3}

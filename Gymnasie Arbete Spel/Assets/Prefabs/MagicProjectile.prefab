@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 698097465}
   - component: {fileID: 698097464}
   - component: {fileID: 698097463}
-  - component: {fileID: 3890183803178312918}
+  - component: {fileID: 8570161172427444934}
   m_Layer: 8
   m_Name: MagicProjectile
   m_TagString: Untagged
@@ -118,7 +118,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3890183803178312918
+--- !u!114 &8570161172427444934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867912927257745800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e1e909b941ced47890afbf26955383, type: 3}
+  m_Script: {fileID: 11500000, guid: 594c0196ffa8c2e488cb9a998a6a8153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSpeed: 0.1
