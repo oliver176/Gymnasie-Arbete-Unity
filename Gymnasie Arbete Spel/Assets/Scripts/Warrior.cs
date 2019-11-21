@@ -37,10 +37,6 @@ public class Warrior : Enemy
             anim.SetBool("WarriorDead", true);
             StartCoroutine("DeathTimer");
         }
-        if (withinRange) //om player inom range
-        {
-
-        }
     }
     IEnumerator DeathTimer()
     {
