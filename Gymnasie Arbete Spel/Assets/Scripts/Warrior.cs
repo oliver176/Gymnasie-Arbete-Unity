@@ -48,6 +48,17 @@ public class Warrior : Enemy
         yield return new WaitForSeconds(2);
         anim.SetBool("WarriorAttackRange", false);
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "MagicAttack")
+        {
+            float dmg = Random.Range(PlayerStats.minMagiDmg, PlayerStats.maxMagiDmg);
+            Debug.Log("DAMAGE = " + dmg);
+            Debug.Log("HP: " + currentHP);
+            healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
+            currentHP -= dmg;
+        }
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")  //inom collidern som representerar range

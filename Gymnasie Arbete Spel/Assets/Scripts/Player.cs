@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public static float physDmgModifier;
     public static float magiDmgModifier;
     public static float currentXP = 0;
-    public static float xpToLevelUp = 100;
+    public static float xpToLevelUp;
     public static int xpModifierperLvl = 20;
     public static float playerMaxHealth;
     public static float playerMaxShield;

@@ -24,7 +24,6 @@ public class HealthManager : PlayerStats
     private void Update()
     {
         playerMaxHealth = 90 + (10 * level);
-        //Debug.Log("player level: " + level);
 
         if (waitingForShield == false)
         {

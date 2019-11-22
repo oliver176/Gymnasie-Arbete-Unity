@@ -11,6 +11,8 @@ public class Enemy : DamageDealer
     protected float fireRate;
     protected float counter;
 
+    protected bool xpGiven = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +35,10 @@ public class Enemy : DamageDealer
 
     protected bool DeadCheck(float hp)
     {
-        if (hp <= 0)
+        if (hp <= 0 && !xpGiven)
         {
             XpReward(xpWorth);
+            xpGiven = true;
             return true;
         }
         else return false;
