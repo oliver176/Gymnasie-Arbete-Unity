@@ -23,8 +23,6 @@ public class HealthManager : PlayerStats
     // Update is called once per frame
     private void Update()
     {
-        playerMaxHealth = 90 + (10 * level);
-
         if (waitingForShield == false)
         {
             RechargeShield();
