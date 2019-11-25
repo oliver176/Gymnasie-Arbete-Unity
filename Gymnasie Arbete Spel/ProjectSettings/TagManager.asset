@@ -11,6 +11,7 @@ TagManager:
   - MagicAttack
   - PhysicalAttack
   - PatrolPoint
+  - SkeletonWarrior
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2387732203216301028}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: groundDetection
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -47,9 +47,9 @@ GameObject:
   - component: {fileID: 2387732203508599581}
   - component: {fileID: 2387732203508599578}
   - component: {fileID: 2387732203508599579}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Skeleton_warr (1)
-  m_TagString: Untagged
+  m_TagString: SkeletonWarrior
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2387732203606412950}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: wallDetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 12648490386518714}
   - component: {fileID: 4007199910423710581}
   - component: {fileID: 287695323560329400}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 4942989307562058626}
   - component: {fileID: 6472458049231041702}
   - component: {fileID: 3182280802132106227}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: BarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 5575807665681045143}
   - component: {fileID: 5905913949524055723}
   - component: {fileID: 1163287660}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: EnemyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
