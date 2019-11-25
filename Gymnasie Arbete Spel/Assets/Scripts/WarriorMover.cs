@@ -28,17 +28,17 @@ public class WarriorMover : Warrior
     {
         float direction = Player.transform.position.x - transform.position.x;
 
-        if (anim.GetBool("WarriorDead") == false && anim.GetBool("WarriorAttackRange"))
-        {
-            if (direction < 0 && movingRight)
-            {
-                Flip();
-            }
-            else if (direction > 0 && !movingRight)
-            {
-                Flip();
-            }
-        }
+         if (anim.GetBool("WarriorDead") == false && anim.GetBool("WarriorAttackRange"))
+         {
+             if (direction < 0 && movingRight)
+             {
+                 Flip();
+             }
+             else if (direction > 0 && !movingRight)
+             {
+                 Flip();
+             }
+         }
         if (anim.GetBool("WarriorDead") == false && anim.GetBool("WarriorAttackRange") == false)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -46,7 +46,7 @@ public class WarriorMover : Warrior
             RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
             RaycastHit2D wallInfoRight = Physics2D.Raycast(wallDetection.position, Vector2.right, distance);
 
-            if (groundInfo.collider == false)
+            /*if (groundInfo.collider == false)
             {
                 if (movingRight == true)
                 {
@@ -58,9 +58,18 @@ public class WarriorMover : Warrior
                     transform.eulerAngles = new Vector3(0, 0, 0);
                     movingRight = true;
                 }
-            }
+            }*/
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "PatrolPoint")
+        {
+            Flip();
+        }
+    }
+
     private void Flip()
     {
         if (movingRight == true)
