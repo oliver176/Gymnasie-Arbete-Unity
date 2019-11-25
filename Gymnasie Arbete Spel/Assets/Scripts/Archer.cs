@@ -50,13 +50,13 @@ public class Archer : Enemy
         }
 
         // If the input is moving the player right and the player is facing left...
-        if (Player.transform.position.x > transform.position.x && !m_FacingRight)
+        if (Player.transform.position.x > transform.position.x && !m_FacingRight && anim.GetBool("IsDead") == false)
         {
             // ... flip the player.
             Flip();
         }
         // Otherwise if the input is moving the player left and the player is facing right...
-        else if (Player.transform.position.x < transform.position.x && m_FacingRight)
+        else if (Player.transform.position.x < transform.position.x && m_FacingRight && anim.GetBool("IsDead") == false)
         {
             // ... flip the player.
             Flip();
