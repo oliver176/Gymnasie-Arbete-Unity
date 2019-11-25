@@ -10,27 +10,27 @@ public class ArrowMover : MonoBehaviour
 
     private Vector2 direction;
 
-    bool hasCollided = false;
+    private bool hasCollided = false;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         playerPos = player.transform.position;
 
-        direction = (player.transform.position - transform.position).normalized ;
+        direction = (player.transform.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 1000);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
     }
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
         if (!hasCollided)
         {
@@ -38,6 +38,7 @@ public class ArrowMover : MonoBehaviour
             //gameObject.transform.Translate(direction * thrust * Time.deltaTime);
         }
     }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "World Collider")
@@ -58,7 +59,7 @@ public class ArrowMover : MonoBehaviour
         StartCoroutine("DestroyTimer");
     }
 
-    IEnumerator DestroyTimer()
+    private IEnumerator DestroyTimer()
     {
         yield return new WaitForSeconds(15);
         Destroy(gameObject);

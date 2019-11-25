@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5106327352787986016}
   - component: {fileID: 5106327352787986019}
   - component: {fileID: 5106327352787986022}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Skeleton_Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e0a47d63ddc96458521075b9ae55a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDmg: 10
-  maxDmg: 20
-  dmgModifier: 1
+  minDmg: 2000
+  maxDmg: 3800
+  dmgModifier: 0.008
   isDead: 0
   Arrow: {fileID: 7811048276304385271, guid: 536315be97dfb7140b63ab1b4f9b6366, type: 3}
   healthBar: {fileID: 5106327353512732969}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 5106327353512732975}
   - component: {fileID: 5106327353512732974}
   - component: {fileID: 5106327353512732969}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 5106327353550769049}
   - component: {fileID: 5106327353550769048}
   - component: {fileID: 5106327353550769051}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: EnemyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 5106327353746376211}
   - component: {fileID: 5106327353746376209}
   - component: {fileID: 5106327353746376208}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: BarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
