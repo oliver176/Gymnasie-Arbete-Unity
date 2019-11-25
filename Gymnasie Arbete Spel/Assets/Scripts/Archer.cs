@@ -68,6 +68,8 @@ public class Archer : Enemy
         if (other.gameObject.tag == "MagicAttack")
         {
             float dmg = Random.Range(PlayerStats.minMagiDmg, PlayerStats.maxMagiDmg);
+            Debug.Log("HELLO" + dmg);
+            Debug.Log("XDXDXDXD" + currentHP);
             healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
             currentHP -= dmg;
         }
