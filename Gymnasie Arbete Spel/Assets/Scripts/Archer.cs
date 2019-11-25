@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Archer : Enemy
@@ -7,11 +8,13 @@ public class Archer : Enemy
     public GameObject Arrow;
     private GameObject Player;
     public Image healthBar;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
 
         hpModifier = 12;
         baseHP = 90 + (hpModifier * SetLevel());
@@ -32,9 +35,15 @@ public class Archer : Enemy
 
         isDead = DeadCheck(currentHP);
 
+        if (isDead)
+        {
+            anim.SetBool("IsDead", true);
+            StartCoroutine("DeathTimer");
+        }
+
         counter -= Time.deltaTime;
 
-        if (counter < 0)
+        if (counter < 0 && anim.GetBool("IsDead") == false)
         {
             Instantiate(Arrow, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             counter = fireRate;
@@ -73,5 +82,10 @@ public class Archer : Enemy
             healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
             currentHP -= dmg;
         }
+    }
+    IEnumerator DeathTimer()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(this.gameObject);
     }
 }
