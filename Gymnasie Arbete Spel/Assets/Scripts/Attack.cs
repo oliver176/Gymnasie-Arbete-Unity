@@ -21,10 +21,12 @@ public class Attack : PlayerStats
     {
         magiCounter -= Time.deltaTime;
 
-
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Hit();
+            if (physCounter <= 0)
+            {
+                SwordAttack1();
+            }
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -41,9 +43,11 @@ public class Attack : PlayerStats
         Instantiate(Fireball, new Vector3(transform.position.x, transform.position.y, -1), transform.rotation);
     }
 
-    private void Hit()
+    private void SwordAttack1()
     {
-        Debug.Log("HAJAAA!!!");
+        anim.SetTrigger("PlayerSwordAttack1");
+        hitCooldown = 0.75f;
+        physCounter = hitCooldown;
     }
 
     private void CastFireball()
