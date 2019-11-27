@@ -20,6 +20,7 @@ public class Attack : PlayerStats
     private void Update()
     {
         magiCounter -= Time.deltaTime;
+        physCounter -= Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.X))
         {
