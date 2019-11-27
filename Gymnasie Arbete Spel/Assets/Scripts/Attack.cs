@@ -5,8 +5,10 @@ public class Attack : PlayerStats
 {
     public GameObject Fireball;
     private Animator anim;
-    private float castCoolDown;
-    private float counter;
+    private float castCooldown;
+    private float magiCounter;
+    private float hitCooldown;
+    private float physCounter;
 
     // Start is called before the first frame update
     private void Start()
@@ -17,8 +19,8 @@ public class Attack : PlayerStats
     // Update is called once per frame
     private void Update()
     {
-        
-        counter -= Time.deltaTime;
+        magiCounter -= Time.deltaTime;
+
 
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -26,7 +28,7 @@ public class Attack : PlayerStats
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            if (counter <= 0)
+            if (magiCounter <= 0)
             {
                 CastFireball();
             }
@@ -48,7 +50,7 @@ public class Attack : PlayerStats
     {
         anim.SetTrigger("PlayerCast");
         StartCoroutine("CastTimer");
-        castCoolDown = 0.75f;
-        counter = castCoolDown;
+        castCooldown = 0.75f;
+        magiCounter = castCooldown;
     }
 }
