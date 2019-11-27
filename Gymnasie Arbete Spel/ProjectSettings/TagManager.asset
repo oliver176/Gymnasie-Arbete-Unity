@@ -12,6 +12,7 @@ TagManager:
   - PhysicalAttack
   - PatrolPoint
   - SkeletonWarrior
+  - EnemyArrow
   layers:
   - Default
   - TransparentFX
