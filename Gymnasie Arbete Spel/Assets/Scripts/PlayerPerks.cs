@@ -2,8 +2,8 @@
 
 public class PlayerPerks : MonoBehaviour
 {
-    static bool PhysPerkIITaken = false;
-    static bool PhysPerkIIITaken = false;
+    static bool physPerkIITaken = false;
+    static bool physPerkIIITaken = false;
     static bool PhysPerkIVTaken = false;
     static bool MagiPerkIITaken = false;
     static bool MagiPerkIIITaken = false;
@@ -23,7 +23,7 @@ public class PlayerPerks : MonoBehaviour
 
     static float PhysPerkII()
     {
-        if (PhysPerkIITaken)
+        if (physPerkIITaken)
         {
             return 1.2f;
         }
@@ -32,7 +32,7 @@ public class PlayerPerks : MonoBehaviour
 
     static float PhysPerkIII()
     {
-        if (PhysPerkIIITaken)
+        if (physPerkIIITaken)
         {
             return 1.2f;
         }
