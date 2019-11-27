@@ -6,6 +6,7 @@ public class HealthManager : PlayerStats
     float shieldPerSecond;
     bool waitingForShield;
     private Animator anim;
+    public Transform playerSpawnPoint;
 
     // Start is called before the first frame update
     private void Start()
@@ -35,10 +36,20 @@ public class HealthManager : PlayerStats
         {
             playerCurrentShield = playerMaxShield;
         }
-        if (playerCurrentHealth < 0) //om player dör, avaktivera player och aktivera restartUI
+        if (playerCurrentHealth < 0)
         {
             anim.SetBool("IsDead", true);
-            StartCoroutine("DeathTimer");
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+
+            StartCoroutine("RespawnTimer");
+            transform.position = playerSpawnPoint.transform.position;
+            gameObject.GetComponent<PlayerMovement>().enabled = true;
+
+            playerCurrentHealth = playerMaxHealth;
+            playerCurrentShield = 0;
+
+            anim.SetBool("IsDead", false);
+            anim.SetTrigger("PlayerRespawn");
         }
     }
 
@@ -49,13 +60,16 @@ public class HealthManager : PlayerStats
     IEnumerator DeathTimer()
     {
         yield return new WaitForSeconds(5);
-        gameObject.SetActive(false);
     }
     IEnumerator Timer()
     {
         waitingForShield = true;
         yield return new WaitForSeconds(5);
         waitingForShield = false;
+    }
+    IEnumerator RespawnTimer()
+    {
+        yield return new WaitForSeconds(5);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
