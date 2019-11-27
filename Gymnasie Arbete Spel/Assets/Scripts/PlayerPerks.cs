@@ -30,11 +30,48 @@ public class PlayerPerks : MonoBehaviour
         else return 1f;
     }
 
-    static void PhysPerkIII()
+    static float PhysPerkIII()
     {
         if (PhysPerkIIITaken)
         {
-            
+            return 1.2f;
         }
+        else return 1f;
+    }
+
+    static float PhysPerkIV()
+    {
+        if (PhysPerkIVTaken)
+        {
+            return 2f;
+        }
+        else return 1f;
+    }
+
+    static float MagiPerkII()
+    {
+        if (MagiPerkIITaken)
+        {
+            return 1.2f;
+        }
+        else return 1f;
+    }
+
+    static int MagiPerkIII()
+    {
+        if (MagiPerkIIITaken)
+        {
+            return 1;
+        }
+        else return 0;
+    }
+
+    static int MagiPerkIV()
+    {
+        if (MagiPerkIVTaken)
+        {
+            return 2;
+        }
+        else return 0;
     }
 }
