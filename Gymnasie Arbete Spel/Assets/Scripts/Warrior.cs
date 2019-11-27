@@ -52,6 +52,8 @@ public class Warrior : Enemy
     {
         //blir null om det inte har en polygon collider på sig.
         PolygonCollider2D polygonCollider2D = other.gameObject.GetComponent(typeof(PolygonCollider2D)) as PolygonCollider2D;
+        PolygonCollider2D p_collider;
+        p_collider = other.gameObject.GetComponent<PolygonCollider2D>();
 
         if (other.gameObject.tag == "MagicAttack")
         {
@@ -61,7 +63,7 @@ public class Warrior : Enemy
             healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
             currentHP -= dmg;
         }
-        else if (polygonCollider2D != null)
+        else if (polygonCollider2D != null && p_collider.enabled)
         {
             float dmg = Random.Range(PlayerStats.minPhysDmg, PlayerStats.minPhysDmg);
             healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
