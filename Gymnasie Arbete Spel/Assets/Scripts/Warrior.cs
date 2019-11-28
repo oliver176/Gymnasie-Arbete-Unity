@@ -45,7 +45,7 @@ public class Warrior : Enemy
     }
     IEnumerator AttackTimer()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         anim.SetBool("WarriorAttackRange", false);
     }
     private void OnCollisionEnter2D(Collision2D other)
@@ -81,8 +81,7 @@ public class Warrior : Enemy
     {
         if (other.gameObject.name == "Player")  //när player lämnar collidern
         {
-            anim.SetBool("WarriorAttackRange", false);
-            StartCoroutine("Timer");
+            StartCoroutine(AttackTimer());
         }
     }
 }
