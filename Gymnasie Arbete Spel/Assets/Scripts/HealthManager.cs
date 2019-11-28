@@ -1,12 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class HealthManager : PlayerStats
 {
-    float shieldPerSecond;
-    bool waitingForShield;
+    private float shieldPerSecond;
+    private bool waitingForShield;
     private Animator anim;
     public Transform playerSpawnPoint;
+    bool respawned = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -38,38 +39,51 @@ public class HealthManager : PlayerStats
         }
         if (playerCurrentHealth < 0)
         {
+            respawned = false;
+
             anim.SetBool("IsDead", true);
             gameObject.GetComponent<PlayerMovement>().enabled = false;
 
-            StartCoroutine("RespawnTimer");
+            StartCoroutine(RespawnTimer());
+
+        }
+    }
+
+    private IEnumerator RespawnTimer()
+    {
+        yield return new WaitForSecondsRealtime(5);
+        if (!respawned)
+        {
+            print("wait is over");
             transform.position = playerSpawnPoint.transform.position;
             gameObject.GetComponent<PlayerMovement>().enabled = true;
 
             playerCurrentHealth = playerMaxHealth;
             playerCurrentShield = 0;
-
             anim.SetBool("IsDead", false);
             anim.SetTrigger("PlayerRespawn");
+
+            respawned = true;
         }
+        
     }
 
-    void RechargeShield()
+    private void RechargeShield()
     {
         playerCurrentShield += shieldPerSecond * Time.deltaTime;
     }
-    IEnumerator DeathTimer()
+
+    private IEnumerator DeathTimer()
     {
+        Debug.Log("");
         yield return new WaitForSeconds(5);
     }
-    IEnumerator Timer()
+
+    private IEnumerator Timer()
     {
         waitingForShield = true;
         yield return new WaitForSeconds(5);
         waitingForShield = false;
-    }
-    IEnumerator RespawnTimer()
-    {
-        yield return new WaitForSeconds(5);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
