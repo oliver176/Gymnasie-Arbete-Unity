@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerPerks : MonoBehaviour
+public class PlayerPerks : SkillMenu
 {
     static bool physPerkIITaken = false;
     static bool physPerkIIITaken = false;
@@ -19,10 +19,6 @@ public class PlayerPerks : MonoBehaviour
     void Update()
     {
 
-    }
-    public bool pickPerk()
-    {
-        return physPerkIITaken = true;
     }
     static float PhysPerkII()
     {
