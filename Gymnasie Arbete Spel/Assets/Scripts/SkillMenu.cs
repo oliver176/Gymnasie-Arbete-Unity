@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkillMenu : MonoBehaviour
+public class SkillMenu : PlayerStats
 {
     public static bool skillMenuIsEnabled = false;
     public GameObject SkillMenuUI;
+    public Button Magic1;
 
     // Start is called before the first frame update
-
+    void Start()
+    {
+        Button btn = Magic1.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,7 +31,10 @@ public class SkillMenu : MonoBehaviour
             }
         }
     }
-
+    void TaskOnClick()
+    {
+        Debug.Log("You have clicked the button!");
+    }
     void Resume()
     {
         SkillMenuUI.SetActive(false);

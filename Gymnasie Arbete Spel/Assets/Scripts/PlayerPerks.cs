@@ -20,7 +20,10 @@ public class PlayerPerks : MonoBehaviour
     {
 
     }
-
+    public bool pickPerk()
+    {
+        return physPerkIITaken = true;
+    }
     static float PhysPerkII()
     {
         if (physPerkIITaken)
