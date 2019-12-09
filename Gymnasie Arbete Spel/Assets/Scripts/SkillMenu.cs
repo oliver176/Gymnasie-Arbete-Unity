@@ -12,13 +12,17 @@ public class SkillMenu : PlayerStats
     // Start is called before the first frame update
     void Start()
     {
-        Button btn = Magic1.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        //Button btn = Magic1.GetComponent<Button>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Button btn = Magic1.GetComponent<Button>();
+        if (physSkillLevel >= 1)
+        {
+            btn.onClick.AddListener(TaskOnClick);
+        }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (skillMenuIsEnabled)

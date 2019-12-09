@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static int physSkillLevel;
-    public static int magiSkillLevel;
+    public static int physSkillLevel = 0;
+    public static int magiSkillLevel = 0;
     public static float minPhysDmg;
     public static float maxPhysDmg;
     public static float minMagiDmg;
@@ -23,14 +21,12 @@ public class Player : MonoBehaviour
     public static int level = 0;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
     }
 }

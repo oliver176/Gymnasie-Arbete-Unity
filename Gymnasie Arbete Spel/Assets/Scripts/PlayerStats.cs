@@ -24,6 +24,8 @@ public class PlayerStats : Player
     void LevelUp()
     {
         level++;
+        physSkillLevel++;
+        magiSkillLevel++;
         playerMaxHealth = 90 + (10 * level);
         Debug.Log("MAXHP = " + playerMaxHealth);
         xpToLevelUp = 100 + (xpModifierperLvl * (level - 1));
