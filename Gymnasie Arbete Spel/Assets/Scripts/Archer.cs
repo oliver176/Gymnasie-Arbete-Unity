@@ -9,6 +9,7 @@ public class Archer : Enemy
     private GameObject Player;
     public Image healthBar;
     private Animator anim;
+    bool inRange = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +44,13 @@ public class Archer : Enemy
 
         counter -= Time.deltaTime;
 
-        if (counter < 0 && anim.GetBool("IsDead") == false)
+        if (inRange)
         {
-            Instantiate(Arrow, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-            counter = fireRate;
+            if (counter < 0 && anim.GetBool("IsDead") == false)
+            {
+                Instantiate(Arrow, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                counter = fireRate;
+            }
         }
 
         // If the input is moving the player right and the player is facing left...
@@ -87,5 +91,19 @@ public class Archer : Enemy
     {
         yield return new WaitForSeconds(5);
         Destroy(this.gameObject);
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Player")  //inom collidern som representerar range
+        {
+            inRange = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Player")  //inom collidern som representerar range
+        {
+            inRange = false;
+        }
     }
 }
