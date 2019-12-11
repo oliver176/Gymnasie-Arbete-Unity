@@ -17278,6 +17278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7273038719407157623, guid: 47e475808c58b424e9813a19c94b9867,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7273038719407157626, guid: 47e475808c58b424e9813a19c94b9867,
         type: 3}
       propertyPath: m_Camera
@@ -17431,6 +17436,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff23374a748aa664cbe92cb28efaa84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkillMenuUI: {fileID: 0}
+  Magic1: {fileID: 0}
+  Magic2: {fileID: 0}
+  Magic3: {fileID: 0}
+  Physical1: {fileID: 0}
+  Physical2: {fileID: 0}
+  Physical3: {fileID: 0}
 --- !u!114 &7273038719467025269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17443,3 +17455,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff23374a748aa664cbe92cb28efaa84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkillMenuUI: {fileID: 0}
+  Magic1: {fileID: 0}
+  Magic2: {fileID: 0}
+  Magic3: {fileID: 0}
+  Physical1: {fileID: 0}
+  Physical2: {fileID: 0}
+  Physical3: {fileID: 0}
