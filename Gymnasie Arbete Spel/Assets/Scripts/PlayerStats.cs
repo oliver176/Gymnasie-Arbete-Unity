@@ -18,7 +18,6 @@ public class PlayerStats : Player
         maxPhysDmg = 30f * physDmgModifier;
         minMagiDmg = 15f * magiDmgModifier;
         maxMagiDmg = 40f * magiDmgModifier;
-        //Debug.Log("LEVEL = " + level);
     }
 
     void LevelUp()
@@ -30,7 +29,9 @@ public class PlayerStats : Player
         Debug.Log("MAXHP = " + playerMaxHealth);
         xpToLevelUp = 100 + (xpModifierperLvl * (level - 1));
         Debug.Log("XPTOLEVEL = " + xpToLevelUp);
+        currentXP = 0;
         Debug.Log("CURRENTXP = " + currentXP);
+        Debug.Log("LEVEL = " + level);
         playerCurrentHealth = playerMaxHealth;
         //xpToLevelUp = (xpToLevelUp * 1.07f) + (23 * (level - 1) + 1);
     }
