@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : PlayerStats
 {
@@ -7,7 +8,7 @@ public class HealthManager : PlayerStats
     private bool waitingForShield;
     private Animator anim;
     public Transform playerSpawnPoint;
-    bool respawned = false;
+    private bool respawned = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -44,8 +45,9 @@ public class HealthManager : PlayerStats
             anim.SetBool("IsDead", true);
             gameObject.GetComponent<PlayerMovement>().enabled = false;
 
-            StartCoroutine(RespawnTimer());
-
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+            //StartCoroutine(RespawnTimer());
         }
     }
 
@@ -65,7 +67,6 @@ public class HealthManager : PlayerStats
 
             respawned = true;
         }
-        
     }
 
     private void RechargeShield()
