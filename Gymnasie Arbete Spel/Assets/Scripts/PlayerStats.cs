@@ -22,6 +22,7 @@ public class PlayerStats : Player
 
     void LevelUp()
     {
+        //Application.OpenURL("http://unity3d.com/");
         level++;
         physSkillLevel++;
         magiSkillLevel++;

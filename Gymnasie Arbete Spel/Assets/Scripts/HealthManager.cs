@@ -46,6 +46,7 @@ public class HealthManager : PlayerStats
             gameObject.GetComponent<PlayerMovement>().enabled = false;
 
             Scene scene = SceneManager.GetActiveScene();
+            Player.level = 0;
             SceneManager.LoadScene(scene.name);
             //StartCoroutine(RespawnTimer());
         }
