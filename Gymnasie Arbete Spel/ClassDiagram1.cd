@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Archer" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACCACBAAAAAAAAAAAEAAAAAAAACAQggAQIQAAA=</HashCode>
+      <FileName>Assets\Scripts\Archer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Arrow" Collapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Arrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArrowMover" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAgIAAAAABAAAAAAABAAAEBAAAgAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\ArrowMover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Attack" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAAACEAAAAAAAAAAAAAAEAAAQABAQAQAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Attack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterController2D" Collapsed="true">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAGAqhAAAAgCAAAAAEAAAAgAAQYQSCAAAAAAGA=</HashCode>
+      <FileName>Assets\Scripts\CharacterController2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamageDealer" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAIAQAAABABAAAAACAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DamageDealer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAECACIAAAAAAAAEAASAAAAAAAEAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyAI" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FABAAAAAAiAAAAAEIAACCAACAAAAAwEgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EnemyAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyUI" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EnemyUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireballDmg" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FireballDmg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireballMover" Collapsed="true">
+    <Position X="8.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAAIBAAAAAAAAEAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FireballMover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthManager" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACBAAAIAAAQAIAAAAkAAAAACAQAgAAAEgIA=</HashCode>
+      <FileName>Assets\Scripts\HealthManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HUD" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAASAAAAAAAAAAAAAAAAAAAAACAIAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBallMover" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MagicBallMover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAQAAAAAACAgkAABAEAZAAAECQEAAAgBEAAAgAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAgAAAAEAAAIAAAAAAAAAGAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerPerks" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAACACIAAAAAAAAAAAAQAAQABQAAAAABAAAYAAE=</HashCode>
+      <FileName>Assets\Scripts\PlayerPerks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerStats" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIACAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillMenu" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAAABAIAAAIBYAAAAAAAIAAAAAAAgAADg=</HashCode>
+      <FileName>Assets\Scripts\SkillMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Warrior" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACBAAEAAAAAAAAAAAAAAAAACARAgAAIQAAA=</HashCode>
+      <FileName>Assets\Scripts\Warrior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarriorMover" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAQAAAAAAAAEAEFAAgQAAAQAgAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\WarriorMover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.AnimatedTile" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAARAAAACAAEAAAAAAAAAAEAAAAAAAAAAAAAAEAAIA=</HashCode>
+      <FileName>Assets\Tiles\AnimatedTile\AnimatedTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.AnimatedTileEditor" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\AnimatedTile\AnimatedTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.PipelineTile" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACgAAQAQAABAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\PipelineTile\PipelineTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.PipelineTileEditor" Collapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Tiles\PipelineTile\PipelineTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.RandomTile" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\RandomTile\RandomTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.RandomTileEditor" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAgACAA=</HashCode>
+      <FileName>Assets\Tiles\RandomTile\RandomTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.RuleOverrideTile" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgQAAABASgAAAIACAAAAEChAAAAIAAAAAAGAEAAAoA=</HashCode>
+      <FileName>Assets\Tiles\RuleOverrideTile\RuleOverrideTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.TerrainTile" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACgAAQAQAABAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\TerrainTile\TerrainTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.TerrainTileEditor" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Tiles\TerrainTile\TerrainTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.WeightedRandomTile" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\WeightedRandomTile\WeightedRandomTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.Tilemaps.WeightedRandomTileEditor" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAgACQA=</HashCode>
+      <FileName>Assets\Tiles\WeightedRandomTile\WeightedRandomTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.HexagonalRuleTile&lt;T&gt;" Collapsed="true">
+    <Position X="5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\HexagonalRuleTile\HexagonalRuleTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.HexagonalRuleTile" Collapsed="true">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABAEAAkQAAAACAAAAAgEBACAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Tiles\HexagonalRuleTile\HexagonalRuleTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.IsometricRuleTile&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\IsometricRuleTile\IsometricRuleTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.IsometricRuleTile" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\IsometricRuleTile\IsometricRuleTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.RuleTile&lt;T&gt;" Collapsed="true">
+    <Position X="2.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\RuleTile\RuleTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.RuleTile" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQTBCAACkQAAAACAAAAIgABBjAIAAAAAACAAAAIIA=</HashCode>
+      <FileName>Assets\Tiles\RuleTile\RuleTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="UnityEngine.Tilemaps.WeightedSprite" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Tiles\WeightedRandomTile\WeightedRandomTile.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -21,6 +21,8 @@ public class DamageDealer : MonoBehaviour
     protected void XpReward(float xp)
     {
         Player.currentXP += xp;
+        Player.killCount++;
+        Debug.Log("KILLS: " + Player.killCount);
     }
 
     // Update is called once per frame

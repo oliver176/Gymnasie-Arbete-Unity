@@ -17,7 +17,7 @@ public class SkillMenu : PlayerStats
     // Update is called once per frame
     private void Update()
     {
-        Button btn_m1 = Magic1.GetComponent<Button>();
+        /*Button btn_m1 = Magic1.GetComponent<Button>();
         Button btn_m2 = Magic1.GetComponent<Button>();
         Button btn_m3 = Magic1.GetComponent<Button>();
         Button btn_p1 = Magic1.GetComponent<Button>();
@@ -31,8 +31,9 @@ public class SkillMenu : PlayerStats
         if (magiSkillLevel >= 2)
         {
             btn_m1.onClick.AddListener(ActivateMagi1);
-        }
-        if (Input.GetKeyDown(KeyCode.Tab))
+        }*/
+
+        /*if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (skillMenuIsEnabled)
             {
@@ -42,7 +43,7 @@ public class SkillMenu : PlayerStats
             {
                 EnableSkillMenu();
             }
-        }
+        }*/
     }
 
     private void ActivateMagi1()

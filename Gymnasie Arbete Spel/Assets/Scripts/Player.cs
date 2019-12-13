@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static bool finished = false;
+    public static bool hasClosed = false;
     public static int physSkillLevel = 0;
     public static int magiSkillLevel = 0;
+    public static int killCount = 0;
     public static float minPhysDmg;
     public static float maxPhysDmg;
     public static float minMagiDmg;
@@ -23,10 +27,33 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        StartCoroutine("GameTimer");
     }
 
     // Update is called once per frame
     private void Update()
     {
+        if (killCount == 12)
+        {
+            finished = true;
+        }
+
+        if (finished && !hasClosed)
+        {
+            ExitGame();
+        }
+    }
+
+    private void ExitGame()
+    {
+        hasClosed = true;
+        Application.OpenURL("http://unity3d.com/");
+        Application.Quit();
+    }
+
+    private IEnumerator GameTimer()
+    {
+        yield return new WaitForSeconds(60);
+        finished = true;
     }
 }
