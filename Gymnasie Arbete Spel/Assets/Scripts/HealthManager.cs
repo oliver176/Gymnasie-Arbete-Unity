@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthManager : PlayerStats
 {
@@ -9,6 +10,8 @@ public class HealthManager : PlayerStats
     private Animator anim;
     public Transform playerSpawnPoint;
     private bool respawned = false;
+    public Image healthBar;
+    public Image shieldBar;
 
     // Start is called before the first frame update
     private void Start()
@@ -26,6 +29,9 @@ public class HealthManager : PlayerStats
     // Update is called once per frame
     private void Update()
     {
+        healthBar.fillAmount = playerCurrentHealth / playerMaxHealth;
+        shieldBar.fillAmount = playerCurrentShield / playerMaxShield;
+
         if (waitingForShield == false)
         {
             RechargeShield();
