@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
         if (finished && !hasClosed)
         {
-            ExitGame();
+            //ExitGame();
         }
     }
 

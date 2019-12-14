@@ -7,18 +7,20 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public Text displayText;
-    float statToDisplay;
-    int statInInt;
+    //float statToDisplay;
+    //int statInInt;
     string textToDisplay;
-    public GameObject PlayerObject;
     public GameObject StatText;
-    private string questText = "Kill 12 skeletons: {0}/12";
+    string healthText = "Health: {0}";
+    string shieldText = "Shield: {0}";
+    string objectiveText = "Objective:\nKill 12 skeletons";
+    string statusText = "Objective status:\n{0}/12";
 
     // Start is called before the first frame update
     void Start()
     {
-        statInInt = Mathf.RoundToInt(statToDisplay);
-        displayText.text = StatText.tag + statInInt;
+        //statInInt = Mathf.RoundToInt(statToDisplay);
+        //displayText.text = StatText.tag + statInInt;
     }
 
     // Update is called once per frame
@@ -26,27 +28,32 @@ public class HUD : MonoBehaviour
     {
         if (StatText.name.Contains("Health"))
         {
-            statToDisplay = Player.playerCurrentHealth;
+            textToDisplay = String.Format(healthText, Mathf.RoundToInt(CheckPositive(Player.playerCurrentHealth)));
         }
         if (StatText.name.Contains("Shield"))
         {
-            statToDisplay = Player.playerCurrentShield;
+            textToDisplay = String.Format(shieldText, Mathf.RoundToInt(CheckPositive(Player.playerCurrentShield)));
         }
         if (StatText.name.Contains("Quest"))
         {
-            textToDisplay = string.Format(questText, Player.killCount);
-            Debug.Log(textToDisplay);
-            displayText.text = StatText.tag + textToDisplay;
+            textToDisplay = objectiveText;
         }
-
-        statInInt = Mathf.RoundToInt(statToDisplay);
-        if (statInInt <= 0 )
+        if (StatText.name.Contains("Status"))
         {
-            statInInt = 0;
+            textToDisplay = string.Format(statusText, Player.killCount);
         }
 
-        textToDisplay = statInInt.ToString();
+        //textToDisplay = statInInt.ToString();
         
-        displayText.text = StatText.tag + textToDisplay;
+        displayText.text = /*StatText.tag +*/ textToDisplay;
+    }
+
+    float CheckPositive(float statToCheck)
+    {
+        if (Mathf.RoundToInt(statToCheck) < 1)
+        {
+            return statToCheck = 0;
+        }
+        else return statToCheck;
     }
 }
