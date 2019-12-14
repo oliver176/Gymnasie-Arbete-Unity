@@ -17,7 +17,7 @@ public class PlayerStats : Player
         minPhysDmg = 20f * physDmgModifier;
         maxPhysDmg = 30f * physDmgModifier;
         minMagiDmg = 15f * magiDmgModifier;
-        maxMagiDmg = 40f * magiDmgModifier;
+        maxMagiDmg = 35f * magiDmgModifier;
     }
 
     void LevelUp()

@@ -24,11 +24,11 @@ public class Warrior : Enemy
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*if (Input.GetKeyDown(KeyCode.Q))
         {
             healthBar.fillAmount = TakeDamage(10, currentHP, baseHP);
             currentHP -= 10;
-        }
+        }*/
 
         isDead = DeadCheck(currentHP);
         if (isDead)

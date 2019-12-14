@@ -28,11 +28,11 @@ public class Archer : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        /*if (Input.GetKeyDown(KeyCode.P))
         {
             healthBar.fillAmount = TakeDamage(10, currentHP, baseHP);
             currentHP -= 10;
-        }
+        }*/
 
         isDead = DeadCheck(currentHP);
 

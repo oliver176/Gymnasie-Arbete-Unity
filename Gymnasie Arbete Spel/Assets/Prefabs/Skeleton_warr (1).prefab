@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ebc8a5ee0ae934489f63e7533f9b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDmg: 2500
-  maxDmg: 4200
+  minDmg: 3500
+  maxDmg: 4500
   dmgModifier: 0.008
   isDead: 0
   healthBar: {fileID: 0}
