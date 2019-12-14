@@ -42,6 +42,8 @@ public class HealthManager : PlayerStats
         {
             respawned = false;
 
+            m_FacingRight = true;
+
             anim.SetBool("IsDead", true);
             gameObject.GetComponent<PlayerMovement>().enabled = false;
 
