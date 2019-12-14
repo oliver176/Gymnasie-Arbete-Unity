@@ -13,7 +13,7 @@ public class PlayerStats : Player
     // Update is called once per frame
     void Update()
     {
-        LevelUpCheck();
+        //LevelUpCheck();
         minPhysDmg = 20f * physDmgModifier;
         maxPhysDmg = 30f * physDmgModifier;
         minMagiDmg = 15f * magiDmgModifier;

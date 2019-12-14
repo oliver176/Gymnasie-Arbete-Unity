@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : CharacterController2D
 {
     public static bool finished = false;
     public static bool hasClosed = false;
@@ -23,19 +23,31 @@ public class Player : MonoBehaviour
     public static float playerCurrentHealth;
     public static float playerCurrentShield;
     public static int level = 0;
+    static bool gameTimerStarted = false;
+    static float currentTime = 600f;
 
     // Start is called before the first frame update
     private void Start()
     {
-        StartCoroutine("GameTimer");
+        killCount = 0;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (killCount == 12)
+        currentTime -= 1 * Time.deltaTime;
+
+        if (!gameTimerStarted)
+        {
+            Debug.Log("STARTED");
+            //StartCoroutine("GameTimer");
+            gameTimerStarted = true;
+        }
+
+        if (killCount >= 12 || currentTime <= 0)
         {
             finished = true;
+            Debug.Log("COMPLETE");
         }
 
         if (finished && !hasClosed)
@@ -55,5 +67,6 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(60);
         finished = true;
+        Debug.Log("FINISHED");
     }
 }
