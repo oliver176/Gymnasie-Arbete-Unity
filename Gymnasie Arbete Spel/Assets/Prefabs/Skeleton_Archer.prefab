@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e0a47d63ddc96458521075b9ae55a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDmg: 2000
-  maxDmg: 3800
+  minDmg: 1000
+  maxDmg: 2000
   dmgModifier: 0.008
   isDead: 0
   Arrow: {fileID: 7811048276304385271, guid: 536315be97dfb7140b63ab1b4f9b6366, type: 3}
