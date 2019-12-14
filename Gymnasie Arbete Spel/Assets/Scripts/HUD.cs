@@ -15,12 +15,15 @@ public class HUD : MonoBehaviour
     string shieldText = "Shield: {0}";
     string objectiveText = "Objective:\nKill 12 skeletons";
     string statusText = "Objective status:\n{0}/12";
+    static float currentTime = 600f;
+    //static float startingTime = 60f;
 
     // Start is called before the first frame update
     void Start()
     {
         //statInInt = Mathf.RoundToInt(statToDisplay);
         //displayText.text = StatText.tag + statInInt;
+        //currentTime = startingTime;
     }
 
     // Update is called once per frame
@@ -42,9 +45,18 @@ public class HUD : MonoBehaviour
         {
             textToDisplay = string.Format(statusText, Player.killCount);
         }
+        if (StatText.name.Contains("Timer"))
+        {
+            currentTime -= 1 * Time.deltaTime;
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+            }
+            textToDisplay = currentTime.ToString();
+        }
 
         //textToDisplay = statInInt.ToString();
-        
+
         displayText.text = /*StatText.tag +*/ textToDisplay;
     }
 
