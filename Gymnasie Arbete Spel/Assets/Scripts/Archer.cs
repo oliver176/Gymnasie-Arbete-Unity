@@ -78,11 +78,22 @@ public class Archer : Enemy
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+        //blir null om det inte har en polygon collider på sig.
+        PolygonCollider2D polygonCollider2D = other.gameObject.GetComponent(typeof(PolygonCollider2D)) as PolygonCollider2D;
+        PolygonCollider2D p_collider;
+        p_collider = other.gameObject.GetComponent<PolygonCollider2D>();
+
         if (other.gameObject.tag == "MagicAttack")
         {
             float dmg = Random.Range(PlayerStats.minMagiDmg, PlayerStats.maxMagiDmg);
-            Debug.Log("HELLO" + dmg);
-            Debug.Log("XDXDXDXD" + currentHP);
+            Debug.Log("DAMAGE = " + dmg);
+            Debug.Log("HP: " + currentHP);
+            healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
+            currentHP -= dmg;
+        }
+        else if (polygonCollider2D != null && p_collider.enabled)
+        {
+            float dmg = Random.Range(PlayerStats.minPhysDmg, PlayerStats.minPhysDmg);
             healthBar.fillAmount = TakeDamage(dmg, currentHP, baseHP);
             currentHP -= dmg;
         }
