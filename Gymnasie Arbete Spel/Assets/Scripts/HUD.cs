@@ -11,11 +11,14 @@ public class HUD : MonoBehaviour
     //int statInInt;
     string textToDisplay;
     public GameObject StatText;
+    
     string healthText = "Health: {0}";
     string shieldText = "Shield: {0}";
     string objectiveText = "Objective:\nKill 12 skeletons";
     string statusText = "Objective status:\n{0}/12";
     static float currentTime = 600f;
+    static float minute = 0;
+    static float second = 0;
     //static float startingTime = 60f;
 
     // Start is called before the first frame update
@@ -48,16 +51,34 @@ public class HUD : MonoBehaviour
         if (StatText.name.Contains("Timer"))
         {
             currentTime -= 1 * Time.deltaTime;
-            if (currentTime <= 0)
-            {
-                currentTime = 0;
-            }
-            textToDisplay = currentTime.ToString();
+
+            textToDisplay = GetTime();
         }
 
         //textToDisplay = statInInt.ToString();
 
         displayText.text = /*StatText.tag +*/ textToDisplay;
+    }
+
+    string GetTime()
+    {
+        string timerText = "{0}:{1}";
+
+        minute = currentTime / 60;
+
+        second = (minute - Mathf.Floor(minute)) * 60;
+
+        minute = Mathf.Floor(minute);
+        second = Mathf.Floor(second);
+
+        Debug.Log("MINUTE " + minute);
+        Debug.Log("SECOND " + second);
+
+        timerText = String.Format(timerText, minute, second);
+
+        Debug.Log("TIME " + timerText);
+
+        return timerText;
     }
 
     float CheckPositive(float statToCheck)

@@ -59,7 +59,7 @@ public class Player : CharacterController2D
     private void ExitGame()
     {
         hasClosed = true;
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://forms.gle/AyeGZvXBFArXyJxB7");
         Application.Quit();
     }
 
