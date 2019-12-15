@@ -20,9 +20,9 @@ public class HealthManager : PlayerStats
         //start värden, fullt hp och 0 shield
         playerMaxHealth = 90 + (10 * level);
         playerCurrentHealth = playerMaxHealth;
-        playerMaxShield = 25;
+        playerMaxShield = 10;
         playerCurrentShield = playerMaxShield;
-        shieldRechargeDelay = 5;
+        shieldRechargeDelay = 10;
         shieldPerSecond = playerMaxShield / shieldRechargeDelay;
     }
 
@@ -92,7 +92,7 @@ public class HealthManager : PlayerStats
     private IEnumerator Timer()
     {
         waitingForShield = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         waitingForShield = false;
     }
 
